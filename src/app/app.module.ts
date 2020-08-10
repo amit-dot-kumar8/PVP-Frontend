@@ -8,7 +8,7 @@ import { PvpAdminToolComponent } from './components/pvp-admin-tool/pvp-admin-too
 import { DusExchangePlatformComponent } from './components/dus-exchange-platform/dus-exchange-platform.component';
 import { ApplicantMonitoringComponent } from './components/applicant-monitoring/applicant-monitoring.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
