@@ -15,17 +15,17 @@ export class PvpPlatformComponent implements OnInit {
 
   navigateToAdminTool()
   {
-    this.router.navigate(['PvpAdminTool']);
+    this.router.navigate(['pvp-admin-tool']);
   }
 
   navigateToApplicantMoniter()
   {
-    this.router.navigate(['ApplicantMonitoring']);
+    this.router.navigate(['applicant-monitoring']);
   }
 
   navigateToDusExchange()
   {
-    this.router.navigate(['DusExchangePlatform']);
+    this.router.navigate(['dus-exchange-platform']);
   }
 
 }

@@ -7,11 +7,11 @@ import { ApplicantMonitoringComponent } from './components/applicant-monitoring/
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/PvpPlatform', pathMatch: 'full'},
-  { path: 'PvpPlatform', component: PvpPlatformComponent},
-  { path: 'PvpAdminTool', component: PvpAdminToolComponent},
-  { path: 'DusExchangePlatform', component: DusExchangePlatformComponent},
-  { path: 'ApplicantMonitoring', component: ApplicantMonitoringComponent},
+  { path: '', redirectTo: '/pvp-platform', pathMatch: 'full'},
+  { path: 'pvp-platform', component: PvpPlatformComponent},
+  { path: 'pvp-admin-tool', component: PvpAdminToolComponent},
+  { path: 'dus-exchange-platform', component: DusExchangePlatformComponent},
+  { path: 'applicant-monitoring', component: ApplicantMonitoringComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
 
