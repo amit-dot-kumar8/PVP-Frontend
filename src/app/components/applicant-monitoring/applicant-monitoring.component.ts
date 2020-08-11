@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ApplicantMonitoringComponent implements OnInit {
 
   gridData: any = [];
+  dropDownList: any = [];
+  selectedOption:any = '';
   //panelOpenState: boolean = false;
 
   constructor() { }
@@ -21,6 +23,13 @@ export class ApplicantMonitoringComponent implements OnInit {
       {'name':'Application','id':'123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
       {'name':'Application','id':'123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
       {'name':'Application','id':'123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false}
+    ]
+
+    this.dropDownList = [
+      {'value':'1', 'viewValue':'Option 1'},
+      {'value':'2', 'viewValue':'Option 2'},
+      {'value':'3', 'viewValue':'Option 3'},
+      {'value':'4', 'viewValue':'Option 4'}
     ]
   }
 

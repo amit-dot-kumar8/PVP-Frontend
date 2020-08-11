@@ -6,6 +6,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
   @NgModule({
     imports: [
@@ -14,7 +16,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
       MatIconModule,
       MatCardModule,
       MatGridListModule,
-      MatExpansionModule
+      MatExpansionModule,
+      MatBadgeModule,
+      MatInputModule,
+      MatSelectModule
     ],
     exports: [
       MatButtonModule,
@@ -22,7 +27,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
       MatIconModule,
       MatCardModule,
       MatGridListModule,
-      MatExpansionModule
+      MatExpansionModule,
+      MatBadgeModule,
+      MatInputModule,
+      MatSelectModule
     ]
   })
   export class MaterialModule {}

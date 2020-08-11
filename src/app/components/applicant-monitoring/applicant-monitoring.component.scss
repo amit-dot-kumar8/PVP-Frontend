@@ -1,10 +1,11 @@
 
 .root-container{
     background: #e4e4e4;
-    width: 60%;
-    padding: 1%;
+    width: 100%;
 }
-
+.div-padding{
+    padding: 3%;
+}
 .col-background{
     background: white;
 }  
@@ -23,4 +24,35 @@
     background: black;
     color: white;
     border-radius: 100px;
+}
+.applicant-desc{
+    font-size: 80%;
+    color: gray;
+}
+.applicant-head{
+    font-size: 125%;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+.notification-badge{
+    background: blue;
+    padding: 1px 8px;
+    border-radius: 50px;
+    color: white;
+    margin-left: 10px;
+}
+
+.search-icon{
+    font-size: 100%;
+    vertical-align: top;
+}
+.round-corner{
+    border-radius: 50px;;
+}
+
+.example-full-width {
+    width: 100%;
+}
+.example-form {
+    width: 100%;
 }
