@@ -55,4 +55,9 @@
 }
 .example-form {
     width: 100%;
+    padding: 0px 4%;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: white !important;
 }

@@ -16,9 +16,9 @@
             </mat-grid-tile>
             <mat-grid-tile class="col-background round-corner" [colspan]="1" [rowspan]="1">
                 <mat-form-field appearance="fill" [floatLabel]="'never'">
-                   
+                    <span matPrefix>Sort By:  &nbsp;</span>
                     <mat-select [(value)]="selectedOption">
-                      <mat-option></mat-option>
+                      <mat-option>All categories</mat-option>
                       <mat-option [value]="option.value" *ngFor="let option of dropDownList">{{ option.viewValue }}</mat-option>
                     </mat-select>
                   </mat-form-field>
