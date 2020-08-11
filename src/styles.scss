@@ -2,3 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.background-image {
+  background: url("./assets/image/banner2.png");
+  width: 100%;
+  height: 12rem;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 12.1rem;
+    top: 62px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    background: #3652FF;
+  }
+}

@@ -9,6 +9,9 @@ import { DusExchangePlatformComponent } from './components/dus-exchange-platform
 import { ApplicantMonitoringComponent } from './components/applicant-monitoring/applicant-monitoring.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,12 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PvpAdminToolComponent,
     DusExchangePlatformComponent,
     ApplicantMonitoringComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
