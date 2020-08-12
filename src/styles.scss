@@ -20,3 +20,29 @@ body
     background: #3652FF;
   }
 }
+
+.background-image-header{
+  background: url("./assets/image/Group-4.png");
+  width: 100%;
+  height: 12rem;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 12.1rem;
+    top: 62px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    //background: #3652FF;
+  }
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {	
+  background-color: transparent;
+}
+
+.mat-card{
+
+  border: 0px solid #ffffff
+ }

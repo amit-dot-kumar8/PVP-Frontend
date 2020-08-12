@@ -10,7 +10,7 @@
     background: white;
 }  
 .grid-properties{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 75%;
     padding: 0;
 }
@@ -60,4 +60,21 @@
 
 .mat-form-field-appearance-fill .mat-form-field-flex {
     background-color: white !important;
+}
+
+.box-margin{
+    margin-top: -8%;
+}
+
+.grid-col-border{
+    border-radius: 10px;
+    background: white;
+}
+
+.grid-size{
+    width: 65%;
+}
+
+.input-box{
+    margin-left: 5%;
 }

@@ -11,6 +11,7 @@ import { ApplicantMonitoringComponent } from './components/applicant-monitoring/
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { ApplicantHeaderComponent } from './components/applicant-header/applicant-header.component'
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
@@ -21,7 +22,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     DusExchangePlatformComponent,
     ApplicantMonitoringComponent,
     PageNotFoundComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    ApplicantHeaderComponent
   ],
   imports: [
     BrowserModule,
