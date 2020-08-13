@@ -5,7 +5,7 @@
 
         <div class="box-margin">
             <mat-grid-list  cols="8" rowHeight="1:1" [gutterSize]="'15px'">
-                <mat-grid-tile matBadge="4" [matBadgeHidden]="hidden" class="grid-col-border"  [colspan]="1" [rowspan]="1" >
+                <mat-grid-tile matBadge="4"  class="grid-col-border"  [colspan]="1" [rowspan]="1" >
                     UPOV Prisma
                 </mat-grid-tile>
                 <mat-grid-tile class="grid-col-border" [colspan]="1" [rowspan]="1">
@@ -66,7 +66,15 @@
                     </mat-grid-tile>
                 </mat-grid-list>
                 <mat-expansion-panel [expanded]="gridItem.panelOpenState">
-                    <p>Payment fee for multiple countries done.</p>
+                    <!-- <p>Payment fee for multiple countries done.</p> -->
+                    <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
+                        <mat-grid-tile [colspan]="2">
+                            Payment fee for multiple countries done.
+                        </mat-grid-tile>
+                        <mat-grid-tile [colspan]="1">
+                            <button mat-button class="grid-desc-button">Go to application</button>
+                        </mat-grid-tile>
+                    </mat-grid-list>
                 </mat-expansion-panel>
             </mat-card> 
         </div>
