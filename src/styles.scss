@@ -42,7 +42,13 @@ body
   background-color: transparent;
 }
 
-.mat-card{
+.mat-grid-tile {
+  display: block;
+  position: absolute;
+  overflow: inherit !important;
+}
 
-  border: 0px solid #ffffff
- }
+.mat-badge-content {
+  color: #fff;
+  background: #345FF5;
+}
