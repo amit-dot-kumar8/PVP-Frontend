@@ -1,1 +1,90 @@
-<p>pvp-admin-tool works!</p>
+<div style="padding: 5rem">
+  <div  style="display:flex; ">
+  <div style="width:22%">
+
+  <h4>PVP Office Administration Tool <span class="notification-badge">2</span></h4>
+
+
+  <p>Lorem ipsum dolor sit amet, duo errem senserit no. Per ut tota tibique placerat.</p>
+
+</div>
+
+<div style="width: 70%;
+text-align: right;">
+<p style="margin-bottom: 0;">View</p>
+<div style="display: inline-block;
+height: 2.5rem;
+width: 2.5rem;
+background-color: #fff;
+text-align: center;
+padding: 4px;
+border-radius: 5px;">
+  <span style="font-size: 2rem" class="material-icons">
+    view_list
+    </span>
+  </div>
+  <div style="display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px; margin-left: 0.5rem;">
+    <span style="font-size: 2rem" class="material-icons">
+      view_sidebar
+      </span>
+      </div>
+</div>
+  </div>
+<div style="display: flex; margin-bottom: 1.5rem;">
+
+
+    <div class="col-background round-corner" style="width: 30%; height: 3rem;">
+      <form class="example-form">
+          <mat-form-field class="example-full-width" [floatLabel]="'never'">
+            <span matPrefix>Search &nbsp;</span>
+            <mat-icon matPrefix class="search-icon">search</mat-icon>
+            <input type="text" matInput placeholder="">
+
+          </mat-form-field>
+      </form>
+    </div>
+
+    <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
+      <mat-form-field appearance="fill" [floatLabel]="'never'">
+          <span matPrefix>Sort By:  &nbsp;</span>
+          <mat-select>
+            <mat-option>All categories</mat-option>
+            <mat-option>xyz</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+</div>
+<div class="root-container">
+  <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
+      <mat-grid-list cols="8" rowHeight="50px">
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.name}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.id}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.type}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
+              <button mat-button class="view-button">View</button>
+              <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
+                  keyboard_arrow_down
+              </span>
+              <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
+                  keyboard_arrow_up
+              </span>
+          </mat-grid-tile>
+      </mat-grid-list>
+      <mat-expansion-panel [expanded]="gridItem.panelOpenState">
+          <p>I'm visible</p>
+      </mat-expansion-panel>
+  </mat-card>
+
+
+</div>
+</div>

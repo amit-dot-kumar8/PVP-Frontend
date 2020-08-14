@@ -2,7 +2,7 @@
 
 html, body { height: 100%; }
 body
-{ margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #D3D3D3;}
+{ margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #d8d8d8;}
 
 .background-image {
   background: url("./assets/image/banner2.png");
@@ -19,4 +19,21 @@ body
     opacity: 0.8;
     background: #3652FF;
   }
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white !important;
+}
+
+.mat-form-field-underline {
+   width: 0% !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 50px !important;
+  padding: 0px 4% !important;
 }

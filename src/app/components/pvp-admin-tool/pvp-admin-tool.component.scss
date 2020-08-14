@@ -1,0 +1,65 @@
+.root-container{
+  width: 100%;
+
+}
+
+.col-background{
+  background: white;
+}
+.grid-properties{
+  margin-bottom: 5px;
+  font-size: 75%;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.view-button{
+  background: lightgray;
+  color: black;
+  border-radius: 50px;
+  line-height: 2;
+}
+.arrow-icon{
+  background: black;
+  color: white;
+  border-radius: 100px;
+}
+
+.notification-badge{
+  background: #F96656;
+  padding: 7px 10px;
+  height: 2rem;
+  line-height: 1;
+  width: 2rem;
+  border-radius: 50%;
+  color: white;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+.search-icon{
+  font-size: 100%;
+  vertical-align: top;
+}
+.round-corner{
+  border-radius: 50px;;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.example-form {
+  width: 100%;
+  padding: 0px 4%;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent !important;
+}
+
+

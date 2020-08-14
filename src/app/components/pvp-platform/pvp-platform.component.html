@@ -2,31 +2,6 @@
 <button type="button" class="btn btn-primary" (click)="navigateToAdminTool()">PVP Admin Tool</button>
 <button type="button" class="btn btn-primary" (click)="navigateToApplicantMoniter()">Applicant Monitoring</button>
 <button type="button" class="btn btn-primary" (click)="navigateToDusExchange()">Dus Exchange Platform</button> -->
-<!-- <app-header></app-header> -->
+<app-pvp-header></app-pvp-header>
 
-<div class="root-container">
-  <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
-      <mat-grid-list cols="8" rowHeight="50px">
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.name}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.id}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.type}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
-              <button mat-button class="view-button">View</button>
-              <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
-                  keyboard_arrow_down
-              </span>
-              <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
-                  keyboard_arrow_up
-              </span>
-          </mat-grid-tile>
-      </mat-grid-list>
-      <mat-expansion-panel [expanded]="gridItem.panelOpenState">
-          <p>I'm visible</p>
-      </mat-expansion-panel>
-  </mat-card>
-
-
-</div>
+<app-pvp-admin-tool></app-pvp-admin-tool>
