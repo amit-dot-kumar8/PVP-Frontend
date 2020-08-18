@@ -19,15 +19,15 @@
         <br>
         <p class="applicant-head"><span>Aplicant Monitoring</span></p>
         <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
-        
-        <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
+
+        <!-- <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
             <mat-grid-tile class="col-background round-corner" [colspan]="2" [rowspan]="1">
                 <form class="example-form">
                     <mat-form-field class="example-full-width" [floatLabel]="'never'">
                       <span matPrefix>Search &nbsp;</span>
                       <mat-icon matPrefix class="search-icon">search</mat-icon>
                       <input type="text" class="input-box" matInput placeholder="">
-                      
+
                     </mat-form-field>
                 </form>
             </mat-grid-tile>
@@ -40,19 +40,43 @@
                     </mat-select>
                   </mat-form-field>
             </mat-grid-tile>
-        </mat-grid-list>
-        <br>
-        <p class="applicant-head"><span>Notifications</span> 
+        </mat-grid-list> -->
+
+        <div style="width: 100%; display: flex; margin-bottom: 1.5rem;">
+
+
+          <div class="col-background round-corner" style="width: 70%; height: 3rem;">
+            <form style="padding: 0px 27px;">
+                <mat-form-field>
+                  <span matPrefix>Search &nbsp;</span>
+                  <mat-icon matPrefix class="search-icon">search</mat-icon>
+                  <input type="text" matInput placeholder="">
+
+                </mat-form-field>
+            </form>
+          </div>
+
+          <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
+            <mat-form-field appearance="fill" [floatLabel]="'never'">
+                <span matPrefix>Sort By:  &nbsp; All Categories</span>
+                <mat-select>
+                  <mat-option>All categories</mat-option>
+                  <mat-option>xyz</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        <p class="applicant-head"><span>Notifications</span>
            <span class="notification-badge">2</span>
         </p>
         <br>
         <div class="grid-size">
-            <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
-                <mat-grid-list cols="8" rowHeight="50px">
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.name}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.id}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.type}}</mat-grid-tile>
+            <mat-card class="grid-properties" style="font-weight: 600" *ngFor="let gridItem of gridData; let gridIndex = index">
+                <mat-grid-list cols="6" rowHeight="50px">
+                    <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.name}}</mat-grid-tile> -->
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span style="margin-right: 10px; font-weight: 500;">{{gridItem.name}}</span>{{gridItem.id}}</mat-grid-tile>
+                    <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile> -->
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span style="margin-right: 10px; font-weight: 500;">{{gridItem.nameCrop}}</span>{{gridItem.type}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
@@ -66,19 +90,19 @@
                     </mat-grid-tile>
                 </mat-grid-list>
                 <mat-expansion-panel [expanded]="gridItem.panelOpenState">
-                    <!-- <p>Payment fee for multiple countries done.</p> -->
-                    <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
-                        <mat-grid-tile [colspan]="2">
-                            Payment fee for multiple countries done.
-                        </mat-grid-tile>
-                        <mat-grid-tile [colspan]="1">
-                            <button mat-button class="grid-desc-button">Go to application</button>
-                        </mat-grid-tile>
-                    </mat-grid-list>
+
+                    <div style="display: flex; margin-top: 1rem">
+                      <p>Payment fee for multiple countries done.</p>
+                     <div style="    width: 70%;
+                    text-align: right;">
+                     <button mat-button class="grid-desc-button">Go to application</button>
+                    </div>
+                    </div>
+
                 </mat-expansion-panel>
-            </mat-card> 
+            </mat-card>
         </div>
-        
+
     </div>
 </div>
 

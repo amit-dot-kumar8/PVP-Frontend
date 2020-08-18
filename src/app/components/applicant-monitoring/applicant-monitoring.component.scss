@@ -8,7 +8,7 @@
 }
 .col-background{
     background: white;
-}  
+}
 .grid-properties{
     margin-bottom: 10px;
     font-size: 75%;
@@ -19,6 +19,7 @@
     color: black;
     border-radius: 50px;
     line-height: 2;
+    margin-right: 0.5rem;
 }
 .arrow-icon{
     background: black;
@@ -35,7 +36,7 @@
     font-weight: 400;
 }
 .notification-badge{
-    background: blue;
+    background: #345FF5;
     padding: 1px 8px;
     border-radius: 50px;
     color: white;
@@ -81,4 +82,5 @@
 .grid-desc-button{
    color: #5cd9ca;
    border: 2px solid !important;
+   border-radius: 100px;
 }

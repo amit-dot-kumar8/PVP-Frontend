@@ -69,3 +69,45 @@ body
   color: #fff;
   background: #345FF5;
 }
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #d3d3d3 !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #345FF5;
+}
+
+.mat-radio-container {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 14px !important;
+  flex-shrink: 0;
+}
+
+.mat-select-arrow {
+  margin: 11px 4px 2px !important;
+}
+
+.root-container {
+  width: 100%;
+
+}
+
+.mat-form-field-flex {
+  align-items: center !important;
+}
+
+.mat-form-field {
+  line-height: unset !important;
+}
+
+.mat-badge-medium .mat-badge-content {
+  width: 28px !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  font-size: 22px !important;
+  font-weight: normal !important;
+}
