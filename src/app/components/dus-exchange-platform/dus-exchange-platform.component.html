@@ -1,1 +1,75 @@
+<app-dusexchange-header></app-dusexchange-header>
 
+<div class="root-container">
+    <div class="div-padding">
+
+        <br>
+        <p class="applicant-head"><span>DUS Exchange Platform</span> <span class="notification-badge">2</span></p>
+        <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
+        <div class="search-size">
+            <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
+                <mat-grid-tile class="col-background round-corner" [colspan]="2" [rowspan]="1">
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" [floatLabel]="'never'">
+                          <span matPrefix>Search &nbsp;</span>
+                          <mat-icon matPrefix class="search-icon">search</mat-icon>
+                          <input type="text" class="input-box" matInput placeholder="">
+                          
+                        </mat-form-field>
+                    </form>
+                </mat-grid-tile>
+                <mat-grid-tile class="col-background round-corner" [colspan]="1" [rowspan]="1">
+                    <mat-form-field appearance="fill" [floatLabel]="'never'">
+                        <span matPrefix>Sort By:  &nbsp;</span>
+                        <mat-select [(value)]="selectedOption">
+                          <mat-option>All categories</mat-option>
+                          <mat-option [value]="option.value" *ngFor="let option of dropDownList">{{ option.viewValue }}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+        
+        
+        <br>
+        <div class="grid-size">
+            <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
+                <mat-grid-list cols="8" rowHeight="50px">
+
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        {{gridItem.name}}
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.id}}</b></mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.type}}</b></mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.aStatus}}</b></mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
+                        <button mat-button class="view-button">View</button>&nbsp;&nbsp;
+                        <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
+                            keyboard_arrow_down
+                        </span>
+                        <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
+                            keyboard_arrow_up
+                        </span>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <mat-expansion-panel [expanded]="gridItem.panelOpenState">
+                    <!-- <p>Payment fee for multiple countries done.</p> -->
+                    <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
+                        <mat-grid-tile [colspan]="2" class="grid-des">
+                            Payment fee for multiple countries done.
+                        </mat-grid-tile>
+                        <mat-grid-tile [colspan]="1">
+                            <button mat-button class="grid-desc-button">Go to application</button>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+            </mat-card> 
+        </div>
+        
+    </div>
+</div>
