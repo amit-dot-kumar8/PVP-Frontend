@@ -111,3 +111,40 @@ body
   font-size: 22px !important;
   font-weight: normal !important;
 }
+
+.ref-number {
+  left: 63px !important;
+  width: 10rem !important;
+}
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.dropdown-shadow-effect {
+  -webkit-box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:     0px 8px 16px 0px rgba(0,0,0,0.2);  /* Firefox 3.5 - 3.6 */
+  box-shadow:          0px 8px 16px 0px rgba(0,0,0,0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  width: 90%;
+}
+
+.firefox.dropdown-toggle::after {
+  text-align: right;
+  float: right;
+  /*Firefox fix*/
+  margin-top: -12px;
+}
+
+.chrome.dropdown-toggle::after {
+  text-align: right;
+  float: right;
+  margin-top: 8px;
+  margin-left: 0;
+}
+
+.background-white {
+  background: #ffffff;
+  border-radius: 100px;
+  padding: 10px;
+}

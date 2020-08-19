@@ -51,13 +51,21 @@ border-radius: 5px;">
     </div>
 
     <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
-      <mat-form-field appearance="fill" [floatLabel]="'never'">
-          <span matPrefix>Sort By:  &nbsp; All Categories</span>
-          <mat-select>
-            <mat-option>All categories</mat-option>
-            <mat-option>xyz</mat-option>
-          </mat-select>
-        </mat-form-field>
+
+        <div class="dropdown">
+          <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
+                         text-left" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+            <span class="fontClr3">
+              Select
+            </span>
+          </button>
+          <div class="dropdown-menu dropdown-shadow-effect" aria-labelledby="dropdownMenuButton">
+
+            <button class="dropdown-item" type="button" >xyz</button>
+          </div>
+        </div>
       </div>
       <div style="width: 70%;
 text-align: right;">
@@ -77,6 +85,22 @@ text-align: right;">
 
 </div>
 <div class="root-container">
+  <mat-card class="grid-properties" style="margin-bottom: 1rem;
+  background-color: transparent;
+  box-shadow: none;">
+  <mat-grid-list  cols="8" rowHeight="50px">
+    <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
+    <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
+  </mat-grid-tile> -->
+      <mat-grid-tile  [colspan]="1" [rowspan]="1" class="ref-number" style=""><mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>International reference number</mat-grid-tile>
+      <mat-grid-tile  [colspan]="1" [rowspan]="1">Application Number</mat-grid-tile>
+      <mat-grid-tile  [colspan]="1" [rowspan]="1">Novelty</mat-grid-tile>
+      <mat-grid-tile  [colspan]="1" [rowspan]="1">Submission date</mat-grid-tile>
+      <mat-grid-tile  [colspan]="2" [rowspan]="1">Application status</mat-grid-tile>
+      <mat-grid-tile  [colspan]="1" [rowspan]="1">National fees payment status</mat-grid-tile>
+      <mat-grid-tile  [colspan]="1" [rowspan]="1">  </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
   <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
 
       <mat-grid-list cols="8" rowHeight="50px">
