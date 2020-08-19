@@ -20,9 +20,9 @@ export class ApplicantMonitoringComponent implements OnInit {
 
   initializePage() {
     this.gridData = [
-      {'name':'Application','id':'123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
-      {'name':'Application','id':'123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
-      {'name':'Application','id':'123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false}
+      {'name':'Application','id':'# 123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
+      {'name':'Application','id':'# 123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
+      {'name':'Application','id':'# 123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false}
     ]
 
     this.dropDownList = [

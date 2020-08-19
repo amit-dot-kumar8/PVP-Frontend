@@ -19,6 +19,7 @@
     color: black;
     border-radius: 50px;
     line-height: 2;
+    font-weight: 100;
 }
 .arrow-icon{
     background: black;
@@ -81,4 +82,10 @@
 .grid-desc-button{
    color: #5cd9ca;
    border: 2px solid !important;
+}
+.card-font{
+    font-weight: 500;
+}
+.grid-des{
+    color:gray
 }
