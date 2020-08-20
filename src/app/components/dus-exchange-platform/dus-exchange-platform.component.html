@@ -33,6 +33,31 @@
         
         <br>
         <div class="grid-size">
+            <mat-card class="grid-properties">
+                <mat-grid-list cols="8" rowHeight="50px" class="col-background-gray">
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1"></mat-radio-button>
+                        </mat-radio-group>
+                        <span>International Reference number</span>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <span>Application Number</span>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <span>Application status</span>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <span>Submission date</span>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
+                        <span>Dus exam. status</span>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <span>Dus report status</span>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-card>
             <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
                 <mat-grid-list cols="8" rowHeight="50px">
 
@@ -40,13 +65,13 @@
                         <mat-radio-group aria-label="Select an option">
                             <mat-radio-button value="1"></mat-radio-button>
                         </mat-radio-group>
-                        {{gridItem.name}}
+                        {{gridItem.refNo}}
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.id}}</b></mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.type}}</b></mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.aStatus}}</b></mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.applicationStatus}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.submitDate}}</b></mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.dusExamStatus}}</b></mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.dusReportStatus}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
                         <button mat-button class="view-button">View</button>&nbsp;&nbsp;
                         <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
@@ -61,10 +86,13 @@
                     <!-- <p>Payment fee for multiple countries done.</p> -->
                     <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
                         <mat-grid-tile [colspan]="2" class="grid-des">
-                            Payment fee for multiple countries done.
+                            <div class="des-header">Request for examination received.</div><br><br>
+                           <div>Application not received by: Myanmar, Malatsia</div>
+                           
+                            
                         </mat-grid-tile>
                         <mat-grid-tile [colspan]="1">
-                            <button mat-button class="grid-desc-button">Go to application</button>
+                            <button mat-button class="grid-desc-button-new">Send Notification</button>
                         </mat-grid-tile>
                     </mat-grid-list>
                 </mat-expansion-panel>

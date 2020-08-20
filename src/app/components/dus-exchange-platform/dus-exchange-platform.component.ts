@@ -19,9 +19,9 @@ export class DusExchangePlatformComponent implements OnInit {
 
   initializePage() {
     this.gridData = [
-      {'name':'Application','id':'# 123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
-      {'name':'Application','id':'# 123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false},
-      {'name':'Application','id':'# 123234345','nameCrop':'Crop','type':'Pink Strawberry','aStatus':'Application Status update','progress':'3','panelOpenState':false}
+      {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false},
+      {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false},
+      {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false}  
     ]
 
     this.dropDownList = [
@@ -30,6 +30,9 @@ export class DusExchangePlatformComponent implements OnInit {
       {'value':'3', 'viewValue':'Option 3'},
       {'value':'4', 'viewValue':'Option 4'}
     ]
+  }
+  togglePanel(index) {
+    this.gridData[index].panelOpenState = !this.gridData[index].panelOpenState;
   }
 
 }

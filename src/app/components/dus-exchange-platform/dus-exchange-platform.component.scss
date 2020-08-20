@@ -82,13 +82,23 @@
 .input-box{
     margin-left: 5%;
 }
-.grid-desc-button{
-   color: #5cd9ca;
+.grid-desc-button-new{
+    background: #5cd9ca;
+   color: white;
    border: 2px solid !important;
+   border-radius: 50px;
 }
 .card-font{
     font-weight: 500;
 }
 .grid-des{
     color:gray
+}
+.col-background-gray{
+    background:  #e4e4e4;
+}
+.des-header{
+    width: 100%;
+    color: black;
+    font-size: 125%;
 }
