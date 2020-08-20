@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PvpAdminToolComponent implements OnInit {
   gridData: any = [];
+  viewGridMode: boolean = true;
+  viewDetailMode: boolean;
 
   constructor() { }
 
@@ -27,6 +29,16 @@ export class PvpAdminToolComponent implements OnInit {
 
   togglePanel(index) {
     this.gridData[index].panelOpenState = !this.gridData[index].panelOpenState;
+}
+
+toggleViewGridMode () {
+  this.viewGridMode = true;
+  this.viewDetailMode = false;
+}
+
+toggleViewDetailMode () {
+  this.viewGridMode = false;
+  this.viewDetailMode = true;
 }
 
 }
