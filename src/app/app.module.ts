@@ -11,10 +11,11 @@ import { ApplicantMonitoringComponent } from './components/applicant-monitoring/
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PvpHeaderComponent } from './components/pvp-header/pvp-header.component';
-import { ApplicantHeaderComponent } from './components/applicant-header/applicant-header.component'
-import { DusexchangeHeaderComponent } from './components/dusexchange-header/dusexchange-header.component'
+import { ApplicantHeaderComponent } from './components/applicant-header/applicant-header.component';
+import { DusexchangeHeaderComponent } from './components/dusexchange-header/dusexchange-header.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {ProgressBarComponent} from './components/progress-bar/progress-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     PageNotFoundComponent,
     PvpHeaderComponent,
     DusexchangeHeaderComponent,
-    ApplicantHeaderComponent
+    ApplicantHeaderComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

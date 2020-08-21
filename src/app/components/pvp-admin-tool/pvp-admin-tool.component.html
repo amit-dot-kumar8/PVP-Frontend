@@ -1,15 +1,19 @@
 <div style="padding: 5rem">
   <div  style="display:flex; ">
-  <div style="width:22%">
+  <div style="width:32%">
 
-  <h4>PVP Office Administration Tool <span class="notification-badge">2</span></h4>
+  <h4 style="  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;">PVP Office Administration Tool <span class="notification-badge">2</span></h4>
 
 
-  <p>Lorem ipsum dolor sit amet, duo errem senserit no. Per ut tota tibique placerat.</p>
+  <p style="font-size: 21px;
+  font-weight: 400;
+  line-height: 28px; opacity: 0.5;">Lorem ipsum dolor sit amet, duo errem senserit no. Per ut tota tibique placerat.</p>
 
 </div>
 
-<div style="width: 78%;
+<div style="width: 68%;
 text-align: right;">
 <p style="margin-bottom: 0;">View</p>
 <div class="change-view-button" (click)="toggleViewGridMode()">
@@ -28,7 +32,7 @@ text-align: right;">
 
 
     <div class="col-background round-corner" style="width: 30%; height: 3rem;">
-      <form style="padding: 0px 27px;">
+      <form style="padding: 0px 27px; opacity: 0.2;">
           <mat-form-field>
             <span matPrefix>Search &nbsp;</span>
             <mat-icon matPrefix class="search-icon">search</mat-icon>
@@ -72,10 +76,12 @@ text-align: right;">
 </div>
 
 </div>
-<div class="root-container" *ngIf="this.viewGridMode">
+<div class="root-container" *ngIf="viewGridMode">
   <mat-card class="grid-properties" style="margin-bottom: 1rem;
   background-color: transparent;
-  box-shadow: none;">
+  box-shadow: none; font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;  color: rgba(0,0,0,0.5);">
   <mat-grid-list  cols="8" rowHeight="50px">
     <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
     <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
@@ -91,7 +97,9 @@ text-align: right;">
 </mat-card>
   <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
 
-      <mat-grid-list cols="8" rowHeight="50px">
+      <mat-grid-list cols="8" rowHeight="50px" style="  font-size: 13px;
+      font-weight: 400;
+      line-height: 17px;">
         <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
         <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
       </mat-grid-tile> -->
@@ -99,8 +107,10 @@ text-align: right;">
           <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.id}}</mat-grid-tile>
           <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
           <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.type}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
-          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><app-progress-bar></app-progress-bar></mat-grid-tile>
+          <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}   <span class="material-icons">
+            done
+        </span></mat-grid-tile>
           <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
               <button mat-button class="view-button">View</button>
               <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
@@ -113,13 +123,18 @@ text-align: right;">
       </mat-grid-list>
       <mat-expansion-panel [expanded]="gridItem.panelOpenState">
         <div style="display: flex; margin-top: 1rem">
-        <h5>DUS Examination report available for <a style="font-weight: normal;">download</a></h5>
+        <h5 style=" font-size: 21px;
+        font-weight: 400;
+        line-height: 28px;">DUS Examination report available for <a style="font-weight: normal;">download</a></h5>
       </div>
       <div style="    width: 100%;
       text-align: right;">
         <button mat-button class="grid-desc-button" style="background-color: #3652FF;
         color: white;
         border-radius: 50px;
+
+  font-weight: 400;
+  line-height: 28px;
     ">Send notification</button>
       </div>
       </mat-expansion-panel>
@@ -128,12 +143,12 @@ text-align: right;">
 
 </div>
 
-<div class="root-container" *ngIf="this.viewDetailMode">
+<div class="root-container" *ngIf="viewDetailMode">
   <mat-grid-list class="grid-properties sticky-card" cols="6" rowHeight="50px" style="margin-bottom: 1rem;
   background-color: transparent;
   box-shadow: none; font-weight: 600;
     font-size: 85%;" >
-      <mat-grid-tile  [colspan]="1" [rowspan]="1" class="ref-number">Submitted</mat-grid-tile>
+      <mat-grid-tile  [colspan]="1" [rowspan]="1">Submitted</mat-grid-tile>
       <mat-grid-tile  [colspan]="1" [rowspan]="1">Received</mat-grid-tile>
       <mat-grid-tile  [colspan]="1" [rowspan]="1">Formality exam completed</mat-grid-tile>
       <mat-grid-tile  [colspan]="1" [rowspan]="1">Novelty/Denomination Exam</mat-grid-tile>
@@ -162,17 +177,18 @@ text-align: right;">
           <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
             <p style="display: block; font-weight: 600;">Pink Strawberry</p>
             <p style="display: block;">Submitted 12-02-2020</p>
+            <span class="material-icons arrow-icon sticky-card-btn-position">
+              done
+          </span>
           </mat-grid-tile>
-          <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
+          <mat-grid-tile class="sticky-card-style-active" [colspan]="1" [rowspan]="1">
             <p style="display: block; font-weight: 600;">Pink Strawberry</p>
             <p style="display: block;">Submitted 12-02-2020</p>
+            <button mat-button class="view-button sticky-card-btn-position">View</button>
           </mat-grid-tile>
-          <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
-            <p style="display: block; font-weight: 600;">Pink Strawberry</p>
-            <p style="display: block;">Submitted 12-02-2020</p>
+          <mat-grid-tile class="sticky-card-style-nodata" [colspan]="1" [rowspan]="1">
           </mat-grid-tile>
       </mat-grid-list>
-
   <!-- </mat-card> -->
 
 

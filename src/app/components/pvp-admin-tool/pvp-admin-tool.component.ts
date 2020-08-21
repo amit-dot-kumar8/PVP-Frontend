@@ -18,12 +18,12 @@ export class PvpAdminToolComponent implements OnInit {
 
   initializePage() {
     this.gridData = [
-      {name: 'Application', id: '123234345', nameCrop: 'Crop', type: 'Pink Strawberry',
-      aStatus: 'Application Status update', progress: '3', panelOpenState: false},
-      {name: 'Application', id: '123234345', nameCrop: 'Crop', type: 'Pink Strawberry',
-      aStatus: 'Application Status update', progress: '3', panelOpenState: false},
-      {name: 'Application', id: '123234345', nameCrop: 'Crop', type: 'Pink Strawberry',
-      aStatus: 'Application Status update', progress: '3', panelOpenState: false}
+      {name: 'Application', id: '123234345', nameCrop: '-', type: 'Pink Strawberry',
+      aStatus: 'Application Status update', progress: 'paid', panelOpenState: false},
+      {name: 'Application', id: '123234345', nameCrop: '-', type: 'Pink Strawberry',
+      aStatus: 'Application Status update', progress: 'paid', panelOpenState: false},
+      {name: 'Application', id: '123234345', nameCrop: '-', type: 'Pink Strawberry',
+      aStatus: 'Application Status update', progress: 'paid', panelOpenState: false}
     ];
   }
 
