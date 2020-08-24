@@ -21,6 +21,23 @@ body
   }
 }
 
+.background-image-pvp-platform {
+  background: url("./assets/image/Data-monitor-2.png");
+  width: 100%;
+  height: 12rem;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 12.1rem;
+    top: 62px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    background: #6a37ff;
+  }
+}
+
 .mat-form-field-appearance-legacy .mat-form-field-underline {
   background-color: transparent !important;
 }
@@ -190,6 +207,22 @@ body
   &:hover, &:focus, &:active {
     border: 2px solid #345FF5;
   }
+}
+
+.change-view-pvp-platform {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover, &:focus, &:active {
+    border: 2px solid #6a37ff;
+}
 }
 
 .progress-bar {
