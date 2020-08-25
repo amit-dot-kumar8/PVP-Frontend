@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-pvp-admin-tool',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pvp-admin-tool.component.scss']
 })
 export class PvpAdminToolComponent implements OnInit {
+
+  @ViewChild('sidenav') sidenav: MatSidenav;
+
   gridData: any = [];
   viewGridMode: boolean = true;
   viewDetailMode: boolean;
@@ -39,6 +43,11 @@ toggleViewGridMode () {
 toggleViewDetailMode () {
   this.viewGridMode = false;
   this.viewDetailMode = true;
+}
+
+close(reason: string) {
+  //this.reason = reason;
+  this.sidenav.close();
 }
 
 }
