@@ -2,7 +2,7 @@
 
 html, body { height: 100%; }
 body
-{ margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #d8d8d8;}
+{ margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f6f6f6; overflow: hidden;}
 
 .background-image {
   background: url("./assets/image/banner2.png");
@@ -18,6 +18,23 @@ body
     bottom: 0;
     opacity: 0.8;
     background: #3652FF;
+  }
+}
+
+.background-image-pvp-platform {
+  background: url("./assets/image/Data-monitor-2.png");
+  width: 100%;
+  height: 12rem;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 12.1rem;
+    top: 62px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    background: #6a37ff;
   }
 }
 
@@ -85,10 +102,11 @@ body
 .mat-badge-content {
   color: #fff;
   background: #345FF5;
+  font-weight: 400 !important;
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: #d3d3d3 !important;
+  border-color: #000000 !important;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
@@ -178,6 +196,19 @@ body
 .sticky-card-style {
   background: #eeeeee;
 }
+.sticky-card-style-active {
+  background: #ffffff;
+}
+
+.sticky-card-style-nodata {
+  background: transparent;
+}
+
+.sticky-card-btn-position {
+  position: absolute !important;
+  bottom: 1rem;
+  right: 1rem;
+}
 
 .change-view-button {
   display: inline-block;
@@ -188,8 +219,40 @@ body
   padding: 4px;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid transparent;
 
-  &:hover, &:focus {
+  &:hover, &:focus, &:active {
     border: 2px solid #345FF5;
   }
+}
+
+.change-view-pvp-platform {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover, &:focus, &:active {
+    border: 2px solid #6a37ff;
+}
+}
+
+.progress-bar {
+  width: 7px;
+  height: 7px;
+  transform: scaleY(-1); display: inline-block;margin-right: 0.5rem;
+  border-radius: 100%;
+}
+
+.progress-bar-green {
+  background: #8ed464;
+}
+
+.progress-bar-grey {
+  background: #d8d8d8;
 }
