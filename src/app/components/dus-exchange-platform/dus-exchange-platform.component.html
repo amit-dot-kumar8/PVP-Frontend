@@ -83,9 +83,32 @@
             <div class="div-padding">
         
                 <br>
-                <p (click)="sidenav.open()" class="applicant-head"><span>DUS Exchange Platform</span> <span class="notification-badge">2</span></p>
-                <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
-                <div style="width: 70%; display: flex; margin-bottom: 1.5rem;">
+                <div (click)="sidenav.open()" class="applicant-head">
+                    <div  style="display:flex; ">
+                        <div style="width:50%">
+                            <span>DUS Exchange Platform</span> <span class="notification-badge">2</span>
+                            <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
+                        </div>
+                        
+                        <div style="width: 50%;
+                            text-align: right;">
+                            <p style="margin-bottom: 0;">View</p>
+                            <div class="change-view-button">
+                            <span style="font-size: 2rem" class="material-icons">
+                                view_list
+                                </span>
+                            </div>
+                            <div class="change-view-button ml-2" >
+                                <span style="font-size: 2rem" class="material-icons">
+                                view_sidebar
+                                </span>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div style="display: flex; margin-bottom: 1.5rem;">
         
         
                     <div class="col-background round-corner" style="width: 70%; height: 3rem;">
@@ -99,7 +122,7 @@
                       </form>
                     </div>
           
-                    <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
+                    <div class="" style="width: 30%; height: 3rem; margin-left: 1rem;">
                       <div class="dropdown">
                         <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
                                        text-left" type="button" id="dropdownMenuButton"
@@ -114,6 +137,20 @@
                           <button class="dropdown-item" type="button" >xyz</button>
                         </div>
                       </div>
+                      </div>
+                      <div style="width: 70%;text-align: right;">
+
+                        <div style="display: inline-block;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        background-color: #fff;
+                        text-align: center;
+                        padding: 4px;
+                        border-radius: 5px; margin-left: 0.5rem;">
+                            <span style="font-size: 2rem" class="material-icons">
+                            playlist_play
+                            </span>
+                            </div>
                       </div>
                     </div>
                 
