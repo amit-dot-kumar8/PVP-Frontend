@@ -1,103 +1,233 @@
-<app-dusexchange-header></app-dusexchange-header>
 
-<div class="root-container">
-    <div class="div-padding">
-
-        <br>
-        <p class="applicant-head"><span>DUS Exchange Platform</span> <span class="notification-badge">2</span></p>
-        <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
-        <div class="search-size">
-            <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
-                <mat-grid-tile class="col-background round-corner" [colspan]="2" [rowspan]="1">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width" [floatLabel]="'never'">
-                          <span matPrefix>Search &nbsp;</span>
-                          <mat-icon matPrefix class="search-icon">search</mat-icon>
-                          <input type="text" class="input-box" matInput placeholder="">
-                          
-                        </mat-form-field>
-                    </form>
-                </mat-grid-tile>
-                <mat-grid-tile class="col-background round-corner" [colspan]="1" [rowspan]="1">
-                    <mat-form-field appearance="fill" [floatLabel]="'never'">
-                        <span matPrefix>Sort By:  &nbsp;</span>
-                        <mat-select [(value)]="selectedOption">
-                          <mat-option>All categories</mat-option>
-                          <mat-option [value]="option.value" *ngFor="let option of dropDownList">{{ option.viewValue }}</mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                </mat-grid-tile>
-            </mat-grid-list>
+<mat-sidenav-container (backdropClick)="close('backdrop')" >
+    <mat-sidenav class="mat-flyout" position="end" #sidenav (keydown.escape)="close('escape')" disableClose>
+        
+        <div class="menu-close">
+                <span (click)="close('toggle button')" class="material-icons menu-close-icon">clear</span>
         </div>
-        
-        
-        <br>
-        <div class="grid-size">
+        <div class="flyout-content">
+            <p class="applicant-head">
+                <span>Pink Strawberry</span> 
+                <button mat-button class="grid-desc-button-new float-right">Edit</button>
+            </p>
+            <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
+            <p class="applicant-head">
+                <span>Details</span>
+            </p>
+
             <mat-card class="grid-properties">
-                <mat-grid-list cols="8" rowHeight="50px" class="col-background-gray">
-                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        <mat-radio-group aria-label="Select an option">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        <span>International Reference number</span>
-                    </mat-grid-tile>
-                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        <span>Application Number</span>
-                    </mat-grid-tile>
-                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        <span>Application status</span>
-                    </mat-grid-tile>
-                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        <span>Submission date</span>
-                    </mat-grid-tile>
+                <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
                     <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
-                        <span>Dus exam. status</span>
+                        <b class="flyout-leftalign">International Reference number</b>
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        <span>Dus report status</span>
+                        <button mat-button class="grid-desc-button-flyout">UPOV Prisma</button>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <b class="flyout-rightalign">XU_2342342344567</b>
                     </mat-grid-tile>
                 </mat-grid-list>
             </mat-card>
-            <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
-                <mat-grid-list cols="8" rowHeight="50px">
 
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
-                        <mat-radio-group aria-label="Select an option">
-                            <mat-radio-button value="1"></mat-radio-button>
-                        </mat-radio-group>
-                        {{gridItem.refNo}}
+            <mat-card class="grid-properties">
+                <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
+                    <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
+                        <b class="flyout-leftalign">Application number</b>
                     </mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.id}}</b></mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.applicationStatus}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.submitDate}}</b></mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.dusExamStatus}}</b></mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.dusReportStatus}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
-                        <button mat-button class="view-button">View</button>&nbsp;&nbsp;
-                        <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
-                            keyboard_arrow_down
-                        </span>
-                        <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
-                            keyboard_arrow_up
-                        </span>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <b class="flyout-rightalign">2341231231</b>
                     </mat-grid-tile>
                 </mat-grid-list>
-                <mat-expansion-panel [expanded]="gridItem.panelOpenState">
-                    <!-- <p>Payment fee for multiple countries done.</p> -->
-                    <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
-                        <mat-grid-tile [colspan]="2" class="grid-des">
-                            <div class="des-header">Request for examination received.</div><br><br>
-                           <div>Application not received by: Myanmar, Malatsia</div>
-                           
-                            
-                        </mat-grid-tile>
-                        <mat-grid-tile [colspan]="1">
-                            <button mat-button class="grid-desc-button-new">Send Notification</button>
-                        </mat-grid-tile>
-                    </mat-grid-list>
-                </mat-expansion-panel>
-            </mat-card> 
+            </mat-card>
+
+            <mat-card class="grid-properties">
+                <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
+                    <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
+                        <b class="flyout-leftalign">Application status</b>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <b class="flyout-rightalign">1</b>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-card>
+
+            <mat-card class="grid-properties">
+                <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
+                    <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
+                        <b class="flyout-leftalign">Submission date</b>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        
+                    </mat-grid-tile>
+                    <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                        <b class="flyout-rightalign">13-01-2020</b>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-card>
+
+            <p class="applicant-head">
+                <span>History</span>
+            </p>
         </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-dusexchange-header></app-dusexchange-header>
+
+        <div class="root-container">
+            <div class="div-padding">
         
-    </div>
-</div>
+                <br>
+                <div (click)="sidenav.open()" class="applicant-head">
+                    <div  style="display:flex; ">
+                        <div style="width:50%">
+                            <span>DUS Exchange Platform</span> <span class="notification-badge">2</span>
+                            <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
+                        </div>
+                        
+                        <div style="width: 50%;
+                            text-align: right;">
+                            <p style="margin-bottom: 0;">View</p>
+                            <div class="change-view-button">
+                            <span style="font-size: 2rem" class="material-icons">
+                                view_list
+                                </span>
+                            </div>
+                            <div class="change-view-button ml-2" >
+                                <span style="font-size: 2rem" class="material-icons">
+                                view_sidebar
+                                </span>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div style="display: flex; margin-bottom: 1.5rem;">
+        
+        
+                    <div class="col-background round-corner" style="width: 70%; height: 3rem;">
+                      <form style="padding: 0px 27px;">
+                          <mat-form-field>
+                            <span matPrefix>Search &nbsp;</span>
+                            <mat-icon matPrefix class="search-icon">search</mat-icon>
+                            <input type="text" matInput placeholder="">
+          
+                          </mat-form-field>
+                      </form>
+                    </div>
+          
+                    <div class="" style="width: 30%; height: 3rem; margin-left: 1rem;">
+                      <div class="dropdown">
+                        <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
+                                       text-left" type="button" id="dropdownMenuButton"
+                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          
+                          <span class="fontClr3">
+                            Select
+                          </span>
+                        </button>
+                        <div class="dropdown-menu dropdown-shadow-effect" aria-labelledby="dropdownMenuButton">
+          
+                          <button class="dropdown-item" type="button" >xyz</button>
+                        </div>
+                      </div>
+                      </div>
+                      <div style="width: 70%;text-align: right;">
+
+                        <div style="display: inline-block;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        background-color: #fff;
+                        text-align: center;
+                        padding: 4px;
+                        border-radius: 5px; margin-left: 0.5rem;">
+                            <span style="font-size: 2rem" class="material-icons">
+                            playlist_play
+                            </span>
+                            </div>
+                      </div>
+                    </div>
+                
+                
+                <br>
+                <div class="grid-size">
+                    <mat-card class="grid-properties">
+                        <mat-grid-list cols="8" rowHeight="50px" class="col-background-gray">
+                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button value="1"></mat-radio-button>
+                                </mat-radio-group>
+                                <span>International Reference number</span>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                                <span>Application Number</span>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                                <span>Application status</span>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                                <span>Submission date</span>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
+                                <span>Dus exam. status</span>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                                <span>Dus report status</span>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                    </mat-card>
+                    <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
+                        <mat-grid-list cols="8" rowHeight="50px" matBadge="4" matBadgeSize="large">
+        
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button value="1"></mat-radio-button>
+                                </mat-radio-group>
+                                {{gridItem.refNo}}
+                            </mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.id}}</b></mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.applicationStatus}}</mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.submitDate}}</b></mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.dusExamStatus}}</b></mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.dusReportStatus}}</mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
+                                <button mat-button class="view-button">View</button>&nbsp;&nbsp;
+                                <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
+                                    keyboard_arrow_down
+                                </span>
+                                <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
+                                    keyboard_arrow_up
+                                </span>
+                            </mat-grid-tile>
+                        </mat-grid-list>
+                        <mat-expansion-panel [expanded]="gridItem.panelOpenState">
+                            
+                            <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
+                                <mat-grid-tile [colspan]="2" class="grid-des">
+                                    <div class="des-header">Request for examination received.</div><br><br>
+                                   <div>Application not received by: Myanmar, Malatsia</div>
+                                   
+                                    
+                                </mat-grid-tile>
+                                <mat-grid-tile [colspan]="1">
+                                    <button mat-button class="grid-desc-button-new">Send Notification</button>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </mat-expansion-panel>
+                    </mat-card> 
+                </div>
+                
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

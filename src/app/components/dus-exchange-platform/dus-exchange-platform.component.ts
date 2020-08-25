@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-dus-exchange-platform',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DusExchangePlatformComponent implements OnInit {
 
+  @ViewChild('sidenav') sidenav: MatSidenav;
+
   gridData:any = [];
   dropDownList:any = [];
   selectedOption:any = '';
+  openFlyout: boolean = false;
+  position = 'right';
+  showCloseButton = true;
+  showBackdrop = false;
+  hideOnBackdropClick = true;
+  flyoutDetails: any = {};
 
   constructor() { }
 
@@ -30,9 +39,23 @@ export class DusExchangePlatformComponent implements OnInit {
       {'value':'3', 'viewValue':'Option 3'},
       {'value':'4', 'viewValue':'Option 4'}
     ]
+
+    this.flyoutDetails = {
+     // to be discuss 
+    }
   }
+
+  close(reason: string) {
+    //this.reason = reason;
+    this.sidenav.close();
+  }
+
   togglePanel(index) {
     this.gridData[index].panelOpenState = !this.gridData[index].panelOpenState;
+  }
+
+  toggleSidebar() {
+    this.openFlyout = !this.openFlyout;
   }
 
 }
