@@ -82,7 +82,7 @@
       <div  style="display:flex; ">
       <div style="width:32%">
     
-      <h4 (click)="sidenav.open()" style="  font-size: 32px;
+      <h4 style="  font-size: 32px;
       font-weight: 400;
       line-height: 43px;">PVP Office Administration Tool <span class="notification-badge">2</span></h4>
     
@@ -191,14 +191,17 @@
               <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}   <span class="material-icons">
                 done
             </span></mat-grid-tile>
-              <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
-                  <button mat-button class="view-button">View</button>
-                  <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
+              <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
+                  <button (click)="sidenav.open()" mat-button class="view-button">View</button>
+                  <div (click)="togglePanel(gridIndex)">
+                    <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
                       keyboard_arrow_down
-                  </span>
-                  <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
-                      keyboard_arrow_up
-                  </span>
+                    </span>
+                    <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
+                        keyboard_arrow_up
+                    </span>
+                  </div>
+                  
               </mat-grid-tile>
           </mat-grid-list>
           <mat-expansion-panel [expanded]="gridItem.panelOpenState">

@@ -83,7 +83,7 @@
             <div class="div-padding">
         
                 <br>
-                <div (click)="sidenav.open()" class="applicant-head">
+                <div class="applicant-head">
                     <div  style="display:flex; ">
                         <div style="width:50%">
                             <span>DUS Exchange Platform</span> <span class="notification-badge">2</span>
@@ -196,14 +196,17 @@
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.submitDate}}</b></mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.dusExamStatus}}</b></mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.dusReportStatus}}</mat-grid-tile>
-                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
-                                <button mat-button class="view-button">View</button>&nbsp;&nbsp;
-                                <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
-                                    keyboard_arrow_down
-                                </span>
-                                <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
-                                    keyboard_arrow_up
-                                </span>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
+                                <button (click)="sidenav.open()" mat-button class="view-button">View</button>&nbsp;&nbsp;
+                                <div (click)="togglePanel(gridIndex)">
+                                    <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
+                                        keyboard_arrow_down
+                                    </span>
+                                    <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
+                                        keyboard_arrow_up
+                                    </span>
+                                </div>
+                                
                             </mat-grid-tile>
                         </mat-grid-list>
                         <mat-expansion-panel [expanded]="gridItem.panelOpenState">
