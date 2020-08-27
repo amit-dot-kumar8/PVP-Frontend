@@ -64,7 +64,7 @@
                     <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile> -->
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span style="margin-right: 10px; font-weight: 500;">{{gridItem.nameCrop}}</span>{{gridItem.type}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.progress}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><app-progress-bar></app-progress-bar></mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
                         <button mat-button class="view-button">View</button>&nbsp;&nbsp;
                         <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
