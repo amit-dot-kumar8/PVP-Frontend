@@ -1,12 +1,12 @@
 <mat-sidenav-container (backdropClick)="close('backdrop')" >
   <mat-sidenav class="mat-flyout" position="end" #sidenav (keydown.escape)="close('escape')" disableClose>
-        
+
     <div class="menu-close">
             <span (click)="close('toggle button')" class="material-icons menu-close-icon">clear</span>
     </div>
     <div class="flyout-content">
         <p class="applicant-head">
-            <span>Pink Strawberry</span> 
+            <span>Pink Strawberry</span>
             <button mat-button class="grid-desc-button-new float-right">Edit</button>
             <button mat-button class="grid-desc-button-flyout float-right cancel-margin" >Cancel</button>
         </p>
@@ -35,7 +35,7 @@
                     <b class="flyout-leftalign">Application number</b>
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                    
+
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                     <b class="flyout-rightalign">2341231231</b>
@@ -49,7 +49,7 @@
                     <b class="flyout-leftalign">Application status</b>
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                    
+
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                     <b class="flyout-rightalign">1</b>
@@ -63,7 +63,7 @@
                     <b class="flyout-leftalign">Submission date</b>
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                    
+
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                     <b class="flyout-rightalign">13-01-2020</b>
@@ -81,18 +81,18 @@
     <div style="padding: 5rem">
       <div  style="display:flex; ">
       <div style="width:32%">
-    
+
       <h4 (click)="sidenav.open()" style="  font-size: 32px;
       font-weight: 400;
       line-height: 43px;">PVP Office Administration Tool <span class="notification-badge">2</span></h4>
-    
-    
+
+
       <p style="font-size: 21px;
       font-weight: 400;
       line-height: 28px; opacity: 0.5;">Lorem ipsum dolor sit amet, duo errem senserit no. Per ut tota tibique placerat.</p>
-    
+
     </div>
-    
+
     <div style="width: 68%;
     text-align: right;">
     <p style="margin-bottom: 0;">View</p>
@@ -109,39 +109,39 @@
     </div>
       </div>
     <div style="width: 100%; display: flex; margin-bottom: 1.5rem;">
-    
-    
+
+
         <div class="col-background round-corner" style="width: 30%; height: 3rem;">
           <form style="padding: 0px 27px; opacity: 0.2;">
               <mat-form-field>
                 <span matPrefix>Search &nbsp;</span>
                 <mat-icon matPrefix class="search-icon">search</mat-icon>
                 <input type="text" matInput placeholder="">
-    
+
               </mat-form-field>
           </form>
         </div>
-    
+
         <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
-    
+
             <div class="dropdown">
               <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
                              text-left" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    
+
                 <span class="fontClr3">
                   Select
                 </span>
               </button>
               <div class="dropdown-menu dropdown-shadow-effect" aria-labelledby="dropdownMenuButton">
-    
+
                 <button class="dropdown-item" type="button" >xyz</button>
               </div>
             </div>
           </div>
           <div style="width: 70%;
     text-align: right;">
-    
+<!--
       <div style="display: inline-block;
       height: 2.5rem;
       width: 2.5rem;
@@ -152,15 +152,15 @@
         <span style="font-size: 2rem" class="material-icons">
           playlist_play
           </span>
-          </div>
+          </div> -->
     </div>
-    
+
     </div>
     <div class="root-container" *ngIf="viewGridMode">
       <mat-card class="grid-properties" style="margin-bottom: 1rem;
       background-color: transparent;
       box-shadow: none; font-size: 15px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 20px;  color: rgba(0,0,0,0.5);">
       <mat-grid-list  cols="8" rowHeight="50px">
         <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
@@ -174,11 +174,11 @@
           <mat-grid-tile  [colspan]="1" [rowspan]="1">National fees payment status</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">  </mat-grid-tile>
       </mat-grid-list>
-    </mat-card> 
+    </mat-card>
       <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
-    
+
           <mat-grid-list cols="8" rowHeight="50px" style="  font-size: 13px;
-          font-weight: 400;
+          font-weight: 500;
           line-height: 17px;">
             <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
             <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
@@ -212,17 +212,17 @@
             <button mat-button class="grid-desc-button" style="background-color: #3652FF;
             color: white;
             border-radius: 50px;
-    
+
       font-weight: 400;
       line-height: 28px;
         ">Send notification</button>
           </div>
           </mat-expansion-panel>
       </mat-card>
-    
-    
+
+
     </div>
-    
+
     <div class="root-container" *ngIf="viewDetailMode">
       <mat-grid-list class="grid-properties sticky-card" cols="6" rowHeight="50px" style="margin-bottom: 1rem;
       background-color: transparent;
@@ -237,7 +237,7 @@
       </mat-grid-list>
     <!-- </mat-card> -->
       <!-- <mat-card class="grid-properties"> -->
-    
+
           <mat-grid-list class="grid-properties sticky-card" cols="6" rowHeight="11rem">
               <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
                 <p style="display: block; font-weight: 600;">Pink Strawberry</p>
@@ -270,8 +270,8 @@
               </mat-grid-tile>
           </mat-grid-list>
       <!-- </mat-card> -->
-    
-    
+
+
     </div>
     </div>
 
