@@ -15,7 +15,7 @@
                 <span>Details</span>
             </p>
 
-            <mat-card class="grid-properties">
+            <mat-card class="grid-properties-flyout">
                 <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
                     <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
                         <b class="flyout-leftalign">International Reference number</b>
@@ -29,7 +29,7 @@
                 </mat-grid-list>
             </mat-card>
 
-            <mat-card class="grid-properties">
+            <mat-card class="grid-properties-flyout">
                 <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
                     <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
                         <b class="flyout-leftalign">Application number</b>
@@ -43,7 +43,7 @@
                 </mat-grid-list>
             </mat-card>
 
-            <mat-card class="grid-properties">
+            <mat-card class="grid-properties-flyout">
                 <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
                     <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
                         <b class="flyout-leftalign">Application status</b>
@@ -57,7 +57,7 @@
                 </mat-grid-list>
             </mat-card>
 
-            <mat-card class="grid-properties">
+            <mat-card class="grid-properties-flyout">
                 <mat-grid-list cols="4" rowHeight="50px" class="col-background-gray">
                     <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
                         <b class="flyout-leftalign">Submission date</b>
@@ -83,7 +83,7 @@
             <div class="div-padding">
         
                 <br>
-                <div (click)="sidenav.open()" class="applicant-head">
+                <div class="applicant-head">
                     <div  style="display:flex; ">
                         <div style="width:50%">
                             <span>DUS Exchange Platform</span> <span class="notification-badge">2</span>
@@ -113,7 +113,7 @@
         
                     <div class="col-background round-corner" style="width: 70%; height: 3rem;">
                       <form style="padding: 0px 27px;">
-                          <mat-form-field>
+                          <mat-form-field class="light-gray">
                             <span matPrefix>Search &nbsp;</span>
                             <mat-icon matPrefix class="search-icon">search</mat-icon>
                             <input type="text" matInput placeholder="">
@@ -157,27 +157,30 @@
                 
                 <br>
                 <div class="grid-size">
-                    <mat-card class="grid-properties">
-                        <mat-grid-list cols="8" rowHeight="50px" class="col-background-gray">
-                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                                <mat-radio-group aria-label="Select an option">
-                                    <mat-radio-button value="1"></mat-radio-button>
-                                </mat-radio-group>
-                                <span>International Reference number</span>
+                    <mat-card class="grid-properties back-transparent">
+                        <mat-grid-list cols="8" rowHeight="50px" class="back-transparent">
+                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
+                                <div class="flyout-leftalign">
+                                    <mat-radio-group aria-label="Select an option">
+                                        <mat-radio-button value="1"></mat-radio-button>
+                                    </mat-radio-group>
+                                    <span>International Reference number</span>
+                                </div>
+                                
                             </mat-grid-tile>
-                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
                                 <span>Application Number</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
                                 <span>Application status</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
                                 <span>Submission date</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="col-background-gray" [colspan]="2" [rowspan]="1">
+                            <mat-grid-tile class="back-transparent" [colspan]="2" [rowspan]="1">
                                 <span>Dus exam. status</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
                                 <span>Dus report status</span>
                             </mat-grid-tile>
                         </mat-grid-list>
@@ -185,25 +188,31 @@
                     <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
                         <mat-grid-list cols="8" rowHeight="50px" matBadge="4" matBadgeSize="large">
         
-                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
-                                <mat-radio-group aria-label="Select an option">
-                                    <mat-radio-button value="1"></mat-radio-button>
-                                </mat-radio-group>
-                                {{gridItem.refNo}}
+                            <mat-grid-tile class="col-background " [colspan]="1" [rowspan]="1">
+                                <div class="flyout-leftalign">
+                                    <mat-radio-group aria-label="Select an option">
+                                        <mat-radio-button value="1"></mat-radio-button>
+                                    </mat-radio-group>
+                                    {{gridItem.refNo}}
+                                </div>
+                                
                             </mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.id}}</b></mat-grid-tile>
-                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.applicationStatus}}</mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><app-progress-bar></app-progress-bar></mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.submitDate}}</b></mat-grid-tile>
-                            <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b>{{gridItem.dusExamStatus}}</b></mat-grid-tile>
+                            <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b><app-progress-bar></app-progress-bar></b></mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.dusReportStatus}}</mat-grid-tile>
-                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
-                                <button mat-button class="view-button">View</button>&nbsp;&nbsp;
-                                <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
-                                    keyboard_arrow_down
-                                </span>
-                                <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
-                                    keyboard_arrow_up
-                                </span>
+                            <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
+                                <button (click)="sidenav.open()" mat-button class="view-button">View</button>&nbsp;&nbsp;
+                                <div (click)="togglePanel(gridIndex)">
+                                    <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
+                                        keyboard_arrow_down
+                                    </span>
+                                    <span class="material-icons arrow-icon" *ngIf="gridItem.panelOpenState">
+                                        keyboard_arrow_up
+                                    </span>
+                                </div>
+                                
                             </mat-grid-tile>
                         </mat-grid-list>
                         <mat-expansion-panel [expanded]="gridItem.panelOpenState">
