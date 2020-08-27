@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
 
+import { SharedModule } from './shared/shared.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PvpPlatformComponent } from './components/pvp-platform/pvp-platform.component';
@@ -38,7 +40,8 @@ import {ProgressBarComponent} from './components/progress-bar/progress-bar.compo
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
