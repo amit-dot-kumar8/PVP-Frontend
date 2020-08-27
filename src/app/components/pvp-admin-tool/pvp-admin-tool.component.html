@@ -126,25 +126,11 @@
         <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
           <pvp-dropdown></pvp-dropdown>
 
-            <!-- <div class="dropdown">
-              <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
-                             text-left" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                <span class="fontClr3">
-                  Select
-                </span>
-              </button>
-              <div class="dropdown-menu dropdown-shadow-effect" aria-labelledby="dropdownMenuButton">
-
-                <button class="dropdown-item" type="button" >xyz</button>
-              </div>
-            </div> -->
           </div>
           <div style="width: 70%;
     text-align: right;">
-<!--
-      <div style="display: inline-block;
+
+      <div *ngIf="viewGridMode" style="display: inline-block;
       height: 2.5rem;
       width: 2.5rem;
       background-color: #fff;
@@ -154,7 +140,7 @@
         <span style="font-size: 2rem" class="material-icons">
           playlist_play
           </span>
-          </div> -->
+          </div>
     </div>
 
     </div>
