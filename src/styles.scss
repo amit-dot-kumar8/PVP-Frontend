@@ -2,7 +2,13 @@
 
 html, body { height: 100%; }
 body
-{ margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f6f6f6;}
+{ margin: 0; font-family: BrownPro, "Helvetica Neue", sans-serif; background-color: #f6f6f6;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */}
+  body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+}
 
 .background-image {
   background: url("./assets/image/pvp-admin-tool.png");
@@ -157,6 +163,10 @@ body
   font-weight: normal !important;
 }
 
+.mat-icon {
+  height: 19px !important;
+}
+
 .ref-number {
   left: 63px !important;
   width: 10rem !important;
@@ -171,7 +181,12 @@ body
   -webkit-box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:     0px 8px 16px 0px rgba(0,0,0,0.2);  /* Firefox 3.5 - 3.6 */
   box-shadow:          0px 8px 16px 0px rgba(0,0,0,0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-  width: 90%;
+  width: 100%;
+}
+
+button:focus {
+  outline: 1px dotted;
+   outline: 5px auto -webkit-focus-ring-color;
 }
 
 .firefox.dropdown-toggle::after {
@@ -179,6 +194,10 @@ body
   float: right;
   /*Firefox fix*/
   margin-top: -12px;
+}
+
+b, strong {
+  font-weight: 500 !important;
 }
 
 .chrome.dropdown-toggle::after {
