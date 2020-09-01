@@ -6,12 +6,12 @@
 .col-background{
   background: white;
 }
-.grid-properties{
-  margin-bottom: 5px;
-  font-size: 75%;
-  padding: 0;
-  margin-bottom: 1.5rem;
-}
+// .grid-properties{
+//   margin-bottom: 5px;
+//   font-size: 75%;
+//   padding: 0;
+//   margin-bottom: 2rem;
+// }
 .view-button{
   background: lightgray;
   color: black;
@@ -43,7 +43,7 @@
 
 .search-icon{
   font-size: 100%;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .round-corner{
   border-radius: 50px;;
@@ -112,7 +112,7 @@
   color: white;
   border-radius: 50px;
   font-weight: 400;
-  line-height: 28px;      
+  line-height: 28px;
 }
 
 .cancel-margin{
