@@ -6,19 +6,19 @@
         <div class="box-margin">
             <mat-grid-list  cols="8" rowHeight="1:1" [gutterSize]="'15px'">
                 <mat-grid-tile matBadge="4" matBadgeSize="large"  class="grid-col-border card-font"  [colspan]="1" [rowspan]="1" >
-                    UPOV Prisma
+                  {{ 'UPOV_PRISMA' | translate}}
                 </mat-grid-tile>
                 <mat-grid-tile class="grid-col-border card-font" [colspan]="1" [rowspan]="1">
-                    Monitoring
+                  {{ 'MONITORING' | translate}}
                 </mat-grid-tile>
                 <mat-grid-tile class="grid-col-border card-font" [colspan]="1" [rowspan]="1">
-                    DART
+                  {{ 'DART' | translate}}
                 </mat-grid-tile>
             </mat-grid-list>
         </div>
         <br>
-        <p class="applicant-head"><span>Applicant Monitoring</span></p>
-        <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
+        <p class="applicant-head"><span>{{ 'APPLICANT_MONITORING' | translate}}</span></p>
+        <p><span class="applicant-desc">{{ 'APPLICANT_DESC' |  translate}}</span></p>
 
 
         <div style="width: 100%; display: flex; margin-bottom: 1.5rem;">
@@ -27,7 +27,7 @@
           <div class="col-background round-corner" style="width: 70%; height: 3rem;">
             <form style="padding: 0px 27px;">
                 <mat-form-field>
-                  <span matPrefix>Search &nbsp;</span>
+                  <span matPrefix>{{ 'SEARCH_TXT' | translate}} &nbsp;</span>
                   <mat-icon matPrefix class="search-icon">search</mat-icon>
                   <input type="text" matInput placeholder="">
 
@@ -52,7 +52,7 @@
             </div>
             </div>
           </div>
-        <p class="applicant-head"><span>Notifications</span>
+        <p class="applicant-head"><span>{{ 'NOTIFICATION' | translate }}</span>
            <span class="notification-badge">2</span>
         </p>
         <br>
@@ -66,7 +66,7 @@
                     <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><app-progress-bar></app-progress-bar></mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
-                        <button mat-button class="view-button">View</button>&nbsp;&nbsp;
+                        <button mat-button class="view-button">{{ 'VIEW_BTN' | translate }}</button>&nbsp;&nbsp;
                         <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
                             keyboard_arrow_down
                         </span>
@@ -81,7 +81,7 @@
                       <p>Payment fee for multiple countries done.</p>
                      <div style="    width: 70%;
                     text-align: right;">
-                     <button mat-button class="grid-desc-button">Go to application</button>
+                     <button mat-button class="grid-desc-button">{{ 'APPLICATION_BTN' | translate }}</button>
                     </div>
                     </div>
 

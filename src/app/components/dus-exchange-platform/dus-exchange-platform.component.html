@@ -8,11 +8,11 @@
         <div class="flyout-content">
             <p class="applicant-head">
                 <span>Pink Strawberry</span> 
-                <button mat-button class="grid-desc-button-new float-right">Edit</button>
+                <button mat-button class="grid-desc-button-new float-right">{{ 'EDIT_BTN' | translate }}</button>
             </p>
             <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
             <p class="applicant-head">
-                <span>Details</span>
+                <span>{{ 'DETAILS' | translate }}</span>
             </p>
 
             <mat-card class="grid-properties-flyout">
@@ -72,7 +72,7 @@
             </mat-card>
 
             <p class="applicant-head">
-                <span>History</span>
+                <span>{{ 'HISTORY' | translate }}</span>
             </p>
         </div>
     </mat-sidenav>
@@ -92,7 +92,7 @@
                         
                         <div style="width: 50%;
                             text-align: right;">
-                            <p style="margin-bottom: 0;">View</p>
+                            <p style="margin-bottom: 0;">{{ 'VIEW_BTN' | translate }}</p>
                             <div class="change-view-button">
                             <span style="font-size: 2rem" class="material-icons">
                                 view_list
@@ -114,7 +114,7 @@
                     <div class="col-background round-corner" style="width: 70%; height: 3rem;">
                       <form style="padding: 0px 27px;">
                           <mat-form-field class="light-gray">
-                            <span matPrefix>Search &nbsp;</span>
+                            <span matPrefix>{{'SEARCH' | translate }} &nbsp;</span>
                             <mat-icon matPrefix class="search-icon">search</mat-icon>
                             <input type="text" matInput placeholder="">
           
@@ -203,7 +203,7 @@
                             <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1"><b><app-progress-bar></app-progress-bar></b></mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.dusReportStatus}}</mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
-                                <button (click)="sidenav.open()" mat-button class="view-button">View</button>&nbsp;&nbsp;
+                                <button (click)="sidenav.open()" mat-button class="view-button">{{ 'VIEW_BTN' | translate }}</button>&nbsp;&nbsp;
                                 <div (click)="togglePanel(gridIndex)">
                                     <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
                                         keyboard_arrow_down
@@ -225,7 +225,7 @@
                                     
                                 </mat-grid-tile>
                                 <mat-grid-tile [colspan]="1">
-                                    <button mat-button class="grid-desc-button-new">Send Notification</button>
+                                    <button mat-button class="grid-desc-button-new">{{ 'SEND_NOTIFICATION' | translate }}</button>
                                 </mat-grid-tile>
                             </mat-grid-list>
                         </mat-expansion-panel>

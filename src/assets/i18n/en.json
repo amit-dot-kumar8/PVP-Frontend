@@ -1,3 +1,19 @@
 {
-    
+    "UPOV_PRISMA": "UPOV Prisma",
+    "MONITORING": "Monitoring",
+    "DART": "DART",
+    "APPLICANT_MONITORING": "Applicant Monitoring",
+    "APPLICANT_DESC": "this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.",
+    "SEARCH_TXT": "Search",
+    "NOTIFICATION": "Notifications",
+    "VIEW_BTN": "View",
+    "APPLICATION_BTN": "Go to application",
+    "EDIT_BTN": "Edit",
+    "CANCEL_BTN": "Cancel",
+    "DETAILS": "Details",
+    "HISTORY": "History",
+    "SEARCH": "Search",
+    "SEND_NOTIFICATION": "Send Notification",
+    "PVP_HEAD": "PVP Office Administration Tool",
+    "PVP_PLATFORM": "PVP Platform"
 }

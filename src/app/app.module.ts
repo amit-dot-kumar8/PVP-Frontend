@@ -21,7 +21,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {ProgressBarComponent} from './components/progress-bar/progress-bar.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 export function httpTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -49,6 +49,7 @@ export function httpTranslateLoader(http: HttpClient) {
     MatToolbarModule,
     MaterialModule,
     SharedModule,
+    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

@@ -7,12 +7,12 @@
     <div class="flyout-content">
         <p class="applicant-head">
             <span>Pink Strawberry</span>
-            <button mat-button class="grid-desc-button-new float-right">Edit</button>
-            <button mat-button class="grid-desc-button-flyout float-right cancel-margin" >Cancel</button>
+            <button mat-button class="grid-desc-button-new float-right">{{ 'EDIT_BTN' | translate }}</button>
+            <button mat-button class="grid-desc-button-flyout float-right cancel-margin" >{{ 'CANCEL_BTN' | translate }}</button>
         </p>
         <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
         <p class="applicant-head">
-            <span>Details</span>
+            <span>{{ 'DETAILS' | translate }}</span>
         </p>
 
         <mat-card class="flyout-grid-properties">
@@ -72,7 +72,7 @@
         </mat-card>
 
         <p class="applicant-head">
-            <span>History</span>
+            <span>{{ 'HISTORY' | translate }}</span>
         </p>
     </div>
   </mat-sidenav>
@@ -84,7 +84,7 @@
 
       <h4 style="  font-size: 32px;
       font-weight: 400;
-      line-height: 43px;">PVP Office Administration Tool <span class="notification-badge">2</span></h4>
+      line-height: 43px;">{{ 'PVP_HEAD' | translate }} <span class="notification-badge">2</span></h4>
 
 
       <p style="font-size: 21px;
@@ -95,7 +95,7 @@
 
     <div style="width: 68%;
     text-align: right;">
-    <p style="margin-bottom: 0;">View</p>
+    <p style="margin-bottom: 0;">{{ 'VIEW_BTN' | translate }}</p>
     <div class="change-view-button" (click)="toggleViewGridMode()">
       <span style="font-size: 2rem" class="material-icons">
         view_list
@@ -115,7 +115,7 @@
         <div class="col-background round-corner" style="width: 30%; height: 3rem;">
           <form style="padding: 0px 27px; opacity: 0.2;">
               <mat-form-field>
-                <span matPrefix>Search &nbsp;</span>
+                <span matPrefix>{{ 'SEARCH' | translate}} &nbsp;</span>
                 <mat-icon matPrefix class="search-icon">search</mat-icon>
                 <input type="text" matInput placeholder="">
 
@@ -154,7 +154,7 @@
         <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
         <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
       </mat-grid-tile> -->
-          <mat-grid-tile  [colspan]="1" [rowspan]="1" class="ref-number" style=""><mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>International reference number</mat-grid-tile>
+          <mat-grid-tile  [colspan]="1" [rowspan]="1" class="ref-number"><mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>International reference number</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Application Number</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Novelty</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Submission date</mat-grid-tile>
@@ -180,7 +180,7 @@
                 done
             </span></mat-grid-tile>
               <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
-                  <button (click)="sidenav.open()" mat-button class="view-button">View</button>
+                  <button (click)="sidenav.open()" mat-button class="view-button">{{ 'VIEW_BTN' | translate}}</button>
                   <div (click)="togglePanel(gridIndex)">
                     <span class="material-icons arrow-icon" *ngIf="!gridItem.panelOpenState">
                       keyboard_arrow_down
@@ -206,7 +206,7 @@
 
       font-weight: 400;
       line-height: 28px;
-        ">Send notification</button>
+        ">{{ 'SEND_NOTIFICATION' | translate }}</button>
           </div>
           </mat-expansion-panel>
       </mat-card>
@@ -255,7 +255,7 @@
               <mat-grid-tile class="sticky-card-style-active" [colspan]="1" [rowspan]="1">
                 <p style="display: block; font-weight: 600;">Pink Strawberry</p>
                 <p style="display: block;">Submitted 12-02-2020</p>
-                <button mat-button class="view-button sticky-card-btn-position">View</button>
+                <button mat-button class="view-button sticky-card-btn-position">{{ 'VIEW_BTN' | translate }}</button>
               </mat-grid-tile>
               <mat-grid-tile class="sticky-card-style-nodata" [colspan]="1" [rowspan]="1">
               </mat-grid-tile>
