@@ -1,0 +1,81 @@
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white !important;
+}
+
+.mat-form-field-underline {
+   width: 0% !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 50px !important;
+  padding: 0px 4% !important;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
+}
+
+
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: transparent;
+}
+
+.mat-grid-tile {
+  display: block;
+  position: absolute;
+  overflow: inherit !important;
+}
+
+.mat-badge-content {
+  color: #fff;
+  background: #345FF5;
+  font-weight: 400 !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #000000 !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #345FF5;
+}
+
+.mat-radio-container {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 14px !important;
+  flex-shrink: 0;
+}
+
+.mat-select-arrow {
+  margin: 11px 4px 2px !important;
+}
+
+
+.mat-form-field-flex {
+  align-items: center !important;
+}
+
+.mat-form-field {
+  line-height: unset !important;
+}
+
+.mat-badge-medium .mat-badge-content {
+  width: 28px !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  font-size: 22px !important;
+  font-weight: normal !important;
+}
+
+.mat-icon {
+  height: 19px !important;
+}
+
