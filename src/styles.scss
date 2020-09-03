@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/header';
+
 
 html, body { height: 100%; }
 body
@@ -10,39 +12,8 @@ body
     background: transparent; /* Chrome/Safari/Webkit */
 }
 
-.background-image {
-  background: url("./assets/image/pvp-admin-tool.png");
-  width: 100%;
-  height: 12rem;
-  &:before {
-    content: '';
-    position: absolute;
-    height: 12.1rem;
-    top: 62px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    background: #3652FF;
-  }
-}
 
-.background-image-pvp-platform {
-  background: url("./assets/image/Data-monitor-2.png");
-  width: 100%;
-  height: 12rem;
-  &:before {
-    content: '';
-    position: absolute;
-    height: 12.1rem;
-    top: 62px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    background: #6a37ff;
-  }
-}
+
 
 .mat-form-field-appearance-legacy .mat-form-field-underline {
   background-color: transparent !important;
@@ -71,39 +42,7 @@ body
   margin-bottom: 2rem;
 }
 
-.background-image-header{
-  background: url("./assets/image/Group-4.png");
-  width: 100%;
-  height: 12rem;
-  &:before {
-    content: '';
-    position: absolute;
-    height: 12.1rem;
-    top: 62px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    //background: #3652FF;
-  }
-}
 
-.dus-background-image-header{
-  background: url("./assets/image/dus-background.png");
-  width: 100%;
-  height: 12rem;
-  &:before {
-    content: '';
-    position: absolute;
-    height: 12.1rem;
-    top: 62px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    background: #00D8ED;
-  }
-}
 
 .mat-form-field-appearance-legacy .mat-form-field-underline {
   background-color: transparent;
