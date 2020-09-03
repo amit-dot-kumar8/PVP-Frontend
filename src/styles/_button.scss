@@ -1,0 +1,53 @@
+@mixin square-btn {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.dropdown-shadow-effect {
+  -webkit-box-shadow:  0px 8px 16px 0px rgba(0,0,0,0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:     0px 8px 16px 0px rgba(0,0,0,0.2);  /* Firefox 3.5 - 3.6 */
+  box-shadow:          0px 8px 16px 0px rgba(0,0,0,0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  width: 100%;
+}
+
+button:focus {
+  outline: 1px dotted;
+   outline: 5px auto -webkit-focus-ring-color;
+}
+
+.firefox.dropdown-toggle::after {
+  text-align: right;
+  float: right;
+  /*Firefox fix*/
+  margin-top: -12px;
+}
+
+.change-view-pvp-admin {
+  @include square-btn;
+
+  &:hover, &:focus, &:active {
+    border: 2px solid #345FF5;
+  }
+}
+
+.change-view-pvp-platform {
+  @include square-btn;
+
+  &:hover, &:focus, &:active {
+    border: 2px solid #6a37ff;
+}
+}
+
