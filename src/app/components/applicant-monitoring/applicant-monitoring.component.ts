@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-applicant-monitoring',
-  templateUrl: './applicant-monitoring.component.html',
-  styleUrls: ['./applicant-monitoring.component.scss']
+  templateUrl: './applicant-monitoring.component.html'
 })
 export class ApplicantMonitoringComponent implements OnInit {
 

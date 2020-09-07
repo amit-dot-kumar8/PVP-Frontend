@@ -3,8 +3,7 @@ import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-dus-exchange-platform',
-  templateUrl: './dus-exchange-platform.component.html',
-  styleUrls: ['./dus-exchange-platform.component.scss']
+  templateUrl: './dus-exchange-platform.component.html'
 })
 export class DusExchangePlatformComponent implements OnInit {
 
@@ -30,7 +29,7 @@ export class DusExchangePlatformComponent implements OnInit {
     this.gridData = [
       {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false},
       {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false},
-      {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false}  
+      {'refNo':'XU_23434545656','id':'# 123234345','applicationStatus':'2','submitDate':'05-09-2020','dusExamStatus':'2','dusReportStatus':'-','panelOpenState':false}
     ]
 
     this.dropDownList = [
@@ -41,7 +40,7 @@ export class DusExchangePlatformComponent implements OnInit {
     ]
 
     this.flyoutDetails = {
-     // to be discuss 
+     // to be discuss
     }
   }
 

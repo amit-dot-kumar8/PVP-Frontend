@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pvp-platform',
-  templateUrl: './pvp-platform.component.html',
-  styleUrls: ['./pvp-platform.component.scss']
+  templateUrl: './pvp-platform.component.html'
 })
 export class PvpPlatformComponent implements OnInit {
   gridData: any = [];

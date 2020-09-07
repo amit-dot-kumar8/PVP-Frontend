@@ -1,6 +1,6 @@
 
 <app-applicant-header></app-applicant-header>
-<div class="root-container">
+<div class="middle-body-padding">
     <div class="div-padding">
 
         <div class="box-margin">
@@ -17,52 +17,37 @@
             </mat-grid-list>
         </div>
         <br>
-        <p class="applicant-head"><span>{{ 'APPLICANT_MONITORING' | translate}}</span></p>
-        <p><span class="applicant-desc">{{ 'APPLICANT_DESC' |  translate}}</span></p>
+        <div class="title-width">
+        <p class="page-title"><span>{{ 'APPLICANT_MONITORING' | translate}}</span></p>
+        <p><span class="subtitle">{{ 'APPLICANT_DESC' |  translate}}</span></p>
+      </div>
+
+          <div class="dropdown-box">
 
 
-        <div style="width: 100%; display: flex; margin-bottom: 1.5rem;">
+            <div class="col-background round-corner search-btn-size-app-monitoring">
+              <form class="search-inner">
+                  <mat-form-field class="light-gray">
+                    <span matPrefix>{{'SEARCH' | translate }} &nbsp;</span>
+                    <mat-icon matPrefix class="search-icon">search</mat-icon>
+                    <input type="text" matInput placeholder="">
 
-
-          <div class="col-background round-corner" style="width: 70%; height: 3rem;">
-            <form style="padding: 0px 27px;">
-                <mat-form-field>
-                  <span matPrefix>{{ 'SEARCH_TXT' | translate}} &nbsp;</span>
-                  <mat-icon matPrefix class="search-icon">search</mat-icon>
-                  <input type="text" matInput placeholder="">
-
-                </mat-form-field>
-            </form>
-          </div>
-
-          <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
-            <div class="dropdown">
-              <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
-                             text-left" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                <span class="fontClr3">
-                  Select
-                </span>
-              </button>
-              <div class="dropdown-menu dropdown-shadow-effect" aria-labelledby="dropdownMenuButton">
-
-                <button class="dropdown-item" type="button" >xyz</button>
+                  </mat-form-field>
+              </form>
+            </div>
+            <div class="sortby-spacing">
+              <pvp-dropdown></pvp-dropdown>
               </div>
             </div>
-            </div>
-          </div>
         <p class="applicant-head"><span>{{ 'NOTIFICATION' | translate }}</span>
            <span class="notification-badge">2</span>
         </p>
         <br>
-        <div class="grid-size">
-            <mat-card class="grid-properties" style="font-weight: 600" *ngFor="let gridItem of gridData; let gridIndex = index">
+        <div class="w-75">
+            <mat-card class="grid-properties text-bold"  *ngFor="let gridItem of gridData; let gridIndex = index">
                 <mat-grid-list cols="6" rowHeight="50px">
-                    <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.name}}</mat-grid-tile> -->
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span style="margin-right: 10px; font-weight: 500;">{{gridItem.name}}</span>{{gridItem.id}}</mat-grid-tile>
-                    <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile> -->
-                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span style="margin-right: 10px; font-weight: 500;">{{gridItem.nameCrop}}</span>{{gridItem.type}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span class="app-monitoring-grid-text-light">{{gridItem.name}}</span>{{gridItem.id}}</mat-grid-tile>
+                    <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><span class="app-monitoring-grid-text-light">{{gridItem.nameCrop}}</span>{{gridItem.type}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="2" [rowspan]="1">{{gridItem.aStatus}}</mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><app-progress-bar></app-progress-bar></mat-grid-tile>
                     <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1" (click)="togglePanel(gridIndex)">
@@ -77,11 +62,10 @@
                 </mat-grid-list>
                 <mat-expansion-panel [expanded]="gridItem.panelOpenState">
 
-                    <div style="display: flex; margin-top: 1rem">
-                      <p>Payment fee for multiple countries done.</p>
-                     <div style="    width: 70%;
-                    text-align: right;">
-                     <button mat-button class="grid-desc-button">{{ 'APPLICATION_BTN' | translate }}</button>
+                    <div class="expand-panel-content">
+                      <p class="grey-text">Payment fee for multiple countries done.</p>
+                     <div class="expanded-panel-btn-box w-75">
+                     <button mat-button class="notification-btn-app-monitoring">{{ 'APPLICATION_BTN' | translate }}</button>
                     </div>
                     </div>
 

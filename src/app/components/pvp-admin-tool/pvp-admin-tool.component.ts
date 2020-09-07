@@ -3,8 +3,7 @@ import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-pvp-admin-tool',
-  templateUrl: './pvp-admin-tool.component.html',
-  styleUrls: ['./pvp-admin-tool.component.scss']
+  templateUrl: './pvp-admin-tool.component.html'
 })
 export class PvpAdminToolComponent implements OnInit {
 

@@ -2,13 +2,13 @@
   <mat-sidenav class="mat-flyout" position="end" #sidenav (keydown.escape)="close('escape')" disableClose>
 
     <div class="menu-close">
-            <span (click)="close('toggle button')" class="material-icons menu-close-icon">clear</span>
+            <span (click)="close('toggle button')" class="material-icons menu-close-icon-pvp">clear</span>
     </div>
     <div class="flyout-content">
         <p class="applicant-head">
             <span>Pink Strawberry</span>
-            <button mat-button class="grid-desc-button-new float-right">{{ 'EDIT_BTN' | translate }}</button>
-            <button mat-button class="grid-desc-button-flyout float-right cancel-margin" >{{ 'CANCEL_BTN' | translate }}</button>
+            <button mat-button class="grid-desc-button-edit-pvp float-right">{{ 'EDIT_BTN' | translate }}</button>
+            <button mat-button class="grid-desc-button-flyout-pvp-admin float-right cancel-margin" >{{ 'CANCEL_BTN' | translate }}</button>
         </p>
         <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
         <p class="applicant-head">
@@ -21,7 +21,7 @@
                     <b class="flyout-leftalign">International Reference number</b>
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                    <button mat-button class="grid-desc-button-flyout">UPOV Prisma</button>
+                    <button mat-button class="grid-desc-button-flyout-pvp-admin">UPOV Prisma</button>
                 </mat-grid-tile>
                 <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                     <b class="flyout-rightalign">XU_2342342344567</b>
@@ -78,42 +78,35 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <app-pvp-header></app-pvp-header>
-    <div style="padding: 5rem">
-      <div  style="display:flex; ">
-      <div style="width:32%">
+    <div class="middle-body-padding">
+      <div  class="title-box ">
+      <div class="title-width">
 
-      <h4 style="  font-size: 32px;
-      font-weight: 400;
-      line-height: 43px;">{{ 'PVP_HEAD' | translate }} <span class="notification-badge">2</span></h4>
+      <h4 class="page-title">{{ 'PVP_HEAD' | translate }} <span class="notification-badge">2</span></h4>
 
 
-      <p style="font-size: 21px;
-      font-weight: 400;
-      line-height: 28px; opacity: 0.5;">Lorem ipsum dolor sit amet, duo errem senserit no. Per ut tota tibique placerat.</p>
+      <p class="subtitle">Lorem ipsum dolor sit amet, duo errem senserit no. Per ut tota tibique placerat.</p>
 
     </div>
 
-    <div style="width: 68%;
-    text-align: right;">
-    <p style="margin-bottom: 0;">{{ 'VIEW_BTN' | translate }}</p>
+    <div class="toggle-view-btn-box">
+    <p class="mb-0">{{ 'VIEW_BTN' | translate }}</p>
     <div class="change-view-pvp-admin" (click)="toggleViewGridMode()">
-      <span style="font-size: 2rem" class="material-icons">
+      <span class="toggle-btn-icon-size material-icons">
         view_list
           </span>
 
       </div>
       <div class="change-view-pvp-admin ml-2" (click)="toggleViewDetailMode()" >
-        <span style="font-size: 2rem" class="material-icons">
+        <span class="toggle-btn-icon-size material-icons">
           view_sidebar
           </span>
           </div>
     </div>
       </div>
-    <div style="width: 100%; display: flex; margin-bottom: 1.5rem;">
-
-
-        <div class="col-background round-corner" style="width: 30%; height: 3rem;">
-          <form style="padding: 0px 27px; opacity: 0.2;">
+    <div class="dropdown-box">
+        <div class="col-background round-corner search-btn-size">
+          <form class="search-inner">
               <mat-form-field>
                 <span matPrefix>{{ 'SEARCH' | translate}} &nbsp;</span>
                 <mat-icon matPrefix class="search-icon">search</mat-icon>
@@ -123,21 +116,13 @@
           </form>
         </div>
 
-        <div class="" style="width: 20%; height: 3rem; margin-left: 1rem;">
+        <div class="sortby-spacing">
           <pvp-dropdown></pvp-dropdown>
-
           </div>
-          <div style="width: 70%;
-    text-align: right;">
+          <div class="playlist-icon-btn-box">
 
-      <div *ngIf="viewGridMode" style="display: inline-block;
-      height: 2.5rem;
-      width: 2.5rem;
-      background-color: #fff;
-      text-align: center;
-      padding: 4px;
-      border-radius: 5px; margin-left: 0.5rem;">
-        <span style="font-size: 2rem" class="material-icons">
+      <div *ngIf="viewGridMode" class="change-view-pvp-admin">
+        <span class="toggle-btn-icon-size material-icons">
           playlist_play
           </span>
           </div>
@@ -145,15 +130,8 @@
 
     </div>
     <div class="root-container" *ngIf="viewGridMode">
-      <mat-card class="grid-properties" style="margin-bottom: 1rem;
-      background-color: transparent;
-      box-shadow: none; font-size: 15px;
-      font-weight: 500;
-      line-height: 20px;  color: rgba(0,0,0,0.5);">
+      <mat-card class="grid-properties grid-title">
       <mat-grid-list  cols="8" rowHeight="50px">
-        <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
-        <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
-      </mat-grid-tile> -->
           <mat-grid-tile  [colspan]="1" [rowspan]="1" class="ref-number"><mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>International reference number</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Application Number</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Novelty</mat-grid-tile>
@@ -165,12 +143,7 @@
     </mat-card>
       <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
 
-          <mat-grid-list cols="8" rowHeight="50px" style="  font-size: 13px;
-          font-weight: 500;
-          line-height: 17px;">
-            <!-- <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">
-            <mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>
-          </mat-grid-tile> -->
+          <mat-grid-list cols="8" rowHeight="50px" class="grid-content">
               <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><mat-radio-group><mat-radio-button></mat-radio-button></mat-radio-group>{{gridItem.name}}</mat-grid-tile>
               <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.id}}</mat-grid-tile>
               <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1">{{gridItem.nameCrop}}</mat-grid-tile>
@@ -193,20 +166,11 @@
               </mat-grid-tile>
           </mat-grid-list>
           <mat-expansion-panel [expanded]="gridItem.panelOpenState">
-            <div style="display: flex; margin-top: 1rem">
-            <h5 style=" font-size: 21px;
-            font-weight: 400;
-            line-height: 28px;">DUS Examination report available for <a style="font-weight: normal;">download</a></h5>
+            <div class="expand-panel-content">
+            <h5>DUS Examination report available for <a class="download-link">download</a></h5>
           </div>
-          <div style="    width: 100%;
-          text-align: right;">
-            <button mat-button class="grid-desc-button" style="background-color: #3652FF;
-            color: white;
-            border-radius: 50px;
-
-      font-weight: 400;
-      line-height: 28px;
-        ">{{ 'SEND_NOTIFICATION' | translate }}</button>
+          <div class="expanded-panel-btn-box">
+            <button mat-button class="notification-btn-pvp-admin">{{ 'SEND_NOTIFICATION' | translate }}</button>
           </div>
           </mat-expansion-panel>
       </mat-card>
@@ -215,10 +179,7 @@
     </div>
 
     <div class="root-container" *ngIf="viewDetailMode">
-      <mat-grid-list class="grid-properties sticky-card" cols="6" rowHeight="50px" style="margin-bottom: 1rem;
-      background-color: transparent;
-      box-shadow: none; font-weight: 600;
-        font-size: 85%;" >
+      <mat-grid-list class="grid-properties sticky-card sticky-card-column-title" cols="6" rowHeight="50px">
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Submitted</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Received</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Formality exam completed</mat-grid-tile>
@@ -226,43 +187,38 @@
           <mat-grid-tile  [colspan]="1" [rowspan]="1">DUS Examination</mat-grid-tile>
           <mat-grid-tile  [colspan]="1" [rowspan]="1">Grant Decision</mat-grid-tile>
       </mat-grid-list>
-    <!-- </mat-card> -->
-      <!-- <mat-card class="grid-properties"> -->
 
-          <mat-grid-list class="grid-properties sticky-card" cols="6" rowHeight="11rem">
-              <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
-                <p style="display: block; font-weight: 600;">Pink Strawberry</p>
-                <p style="display: block;">Submitted 12-02-2020</p>
-                <p style="display: block;">Netherlands</p>
-                <p style="display: block; font-weight: 600;">Ref No.</p>
-                <p>XU_123123123</p>
-              </mat-grid-tile>
-              <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
-                <p style="display: block; font-weight: 600;">Pink Strawberry</p>
-                <p style="display: block;">Submitted 12-02-2020</p>
-              </mat-grid-tile>
-              <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
-                <p style="display: block; font-weight: 600;">Pink Strawberry</p>
-                <p style="display: block;">Submitted 12-02-2020</p>
-              </mat-grid-tile>
-              <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
-                <p style="display: block; font-weight: 600;">Pink Strawberry</p>
-                <p style="display: block;">Submitted 12-02-2020</p>
-                <span class="material-icons arrow-icon sticky-card-btn-position">
-                  done
-              </span>
-              </mat-grid-tile>
-              <mat-grid-tile class="sticky-card-style-active" [colspan]="1" [rowspan]="1">
-                <p style="display: block; font-weight: 600;">Pink Strawberry</p>
-                <p style="display: block;">Submitted 12-02-2020</p>
-                <button mat-button class="view-button sticky-card-btn-position">{{ 'VIEW_BTN' | translate }}</button>
-              </mat-grid-tile>
-              <mat-grid-tile class="sticky-card-style-nodata" [colspan]="1" [rowspan]="1">
-              </mat-grid-tile>
-          </mat-grid-list>
-      <!-- </mat-card> -->
-
-
+      <mat-grid-list class="grid-properties sticky-card" cols="6" rowHeight="11rem">
+        <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
+          <p class="sticky-card-text-bold">Pink Strawberry</p>
+          <p>Submitted 12-02-2020</p>
+          <p>Netherlands</p>
+          <p class="sticky-card-text-bold">Ref No.</p>
+          <p>XU_123123123</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
+          <p class="sticky-card-text-bold">Pink Strawberry</p>
+          <p>Submitted 12-02-2020</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
+          <p class="sticky-card-text-bold">Pink Strawberry</p>
+          <p>Submitted 12-02-2020</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="sticky-card-style" [colspan]="1" [rowspan]="1">
+          <p class="sticky-card-text-bold">Pink Strawberry</p>
+          <p>Submitted 12-02-2020</p>
+          <span class="material-icons arrow-icon sticky-card-btn-position">
+            done
+        </span>
+        </mat-grid-tile>
+        <mat-grid-tile class="sticky-card-style-active" [colspan]="1" [rowspan]="1">
+          <p class="sticky-card-text-bold">Pink Strawberry</p>
+          <p>Submitted 12-02-2020</p>
+          <button mat-button class="view-button sticky-card-btn-position">{{ 'VIEW_BTN' | translate }}</button>
+        </mat-grid-tile>
+        <mat-grid-tile class="sticky-card-style-nodata" [colspan]="1" [rowspan]="1">
+        </mat-grid-tile>
+    </mat-grid-list>
     </div>
     </div>
 

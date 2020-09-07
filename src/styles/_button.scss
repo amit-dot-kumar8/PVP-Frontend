@@ -10,6 +10,13 @@
   border: 2px solid transparent;
 }
 
+@mixin round-corner-btn {
+  color: white;
+  border-radius: 50px !important;
+  font-weight: 400;
+  line-height: 28px !important;
+}
+
 
 .btn.focus, .btn:focus {
   outline: 0;
@@ -24,8 +31,7 @@
 }
 
 button:focus {
-  outline: 1px dotted;
-   outline: 5px auto -webkit-focus-ring-color;
+  outline: none !important;
 }
 
 .firefox.dropdown-toggle::after {
@@ -51,6 +57,22 @@ button:focus {
 }
 }
 
+.change-view-dus-exchange {
+  @include square-btn;
+
+  &:hover, &:focus, &:active {
+    border: 2px solid #01d7f0;
+  }
+}
+
+.change-view-app-mon {
+  @include square-btn;
+
+  &:hover, &:focus, &:active {
+    border: 2px solid #00C5AE;
+  }
+}
+
 .chrome.dropdown-toggle::after {
   text-align: right;
   float: right;
@@ -62,5 +84,28 @@ button:focus {
   background: #ffffff;
   border-radius: 100px;
   padding: 10px;
+}
+
+.notification-btn-pvp-platform {
+  @include round-corner-btn;
+  background-color: #6a37ff;
+}
+
+.notification-btn-pvp-admin {
+  @include round-corner-btn;
+  background-color: #3652FF;
+}
+
+.notification-btn-dus-exchange {
+  @include round-corner-btn;
+  background-color: #01d7f0;
+}
+
+.notification-btn-app-monitoring {
+  color: #00C5AE;
+  border-radius: 50px !important;
+  font-weight: 400;
+  line-height: 28px !important;
+  border: 2px solid #00C5AE !important;
 }
 

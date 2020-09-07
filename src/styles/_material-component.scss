@@ -79,3 +79,6 @@
   height: 19px !important;
 }
 
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
+}

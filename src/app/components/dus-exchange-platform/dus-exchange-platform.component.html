@@ -1,14 +1,14 @@
 
 <mat-sidenav-container (backdropClick)="close('backdrop')" >
     <mat-sidenav class="mat-flyout" position="end" #sidenav (keydown.escape)="close('escape')" disableClose>
-        
+
         <div class="menu-close">
-                <span (click)="close('toggle button')" class="material-icons menu-close-icon">clear</span>
+                <span (click)="close('toggle button')" class="material-icons menu-close-icon-dus">clear</span>
         </div>
         <div class="flyout-content">
             <p class="applicant-head">
-                <span>Pink Strawberry</span> 
-                <button mat-button class="grid-desc-button-new float-right">{{ 'EDIT_BTN' | translate }}</button>
+                <span>Pink Strawberry</span>
+                <button mat-button class="grid-desc-button-edit-dus float-right">{{ 'EDIT_BTN' | translate }}</button>
             </p>
             <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
             <p class="applicant-head">
@@ -21,7 +21,7 @@
                         <b class="flyout-leftalign">International Reference number</b>
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        <button mat-button class="grid-desc-button-flyout">UPOV Prisma</button>
+                        <button mat-button class="grid-desc-button-flyout-dus-exchange">UPOV Prisma</button>
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                         <b class="flyout-rightalign">XU_2342342344567</b>
@@ -35,7 +35,7 @@
                         <b class="flyout-leftalign">Application number</b>
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        
+
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                         <b class="flyout-rightalign">2341231231</b>
@@ -49,7 +49,7 @@
                         <b class="flyout-leftalign">Application status</b>
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        
+
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                         <b class="flyout-rightalign">1</b>
@@ -63,7 +63,7 @@
                         <b class="flyout-leftalign">Submission date</b>
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
-                        
+
                     </mat-grid-tile>
                     <mat-grid-tile class="col-background-gray" [colspan]="1" [rowspan]="1">
                         <b class="flyout-rightalign">13-01-2020</b>
@@ -79,115 +79,94 @@
     <mat-sidenav-content>
         <app-dusexchange-header></app-dusexchange-header>
 
-        <div class="root-container">
+        <div class="middle-body-padding">
             <div class="div-padding">
-        
+
                 <br>
                 <div class="applicant-head">
-                    <div  style="display:flex; ">
-                        <div style="width:50%">
+                    <div  class="title-box">
+                        <div class="title-width">
                             <span>DUS Exchange Platform</span> <span class="notification-badge">2</span>
-                            <p><span class="applicant-desc">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
+                            <p><span class="subtitle">this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.this is a sample text.</span></p>
                         </div>
-                        
-                        <div style="width: 50%;
-                            text-align: right;">
-                            <p style="margin-bottom: 0;">{{ 'VIEW_BTN' | translate }}</p>
-                            <div class="change-view-button">
-                            <span style="font-size: 2rem" class="material-icons">
+
+                        <div class="toggle-view-btn-box">
+                            <p class="mb-0">{{ 'VIEW_BTN' | translate }}</p>
+                            <div class="change-view-dus-exchange">
+                            <span class="toggle-btn-icon-size material-icons">
                                 view_list
                                 </span>
                             </div>
-                            <div class="change-view-button ml-2" >
-                                <span style="font-size: 2rem" class="material-icons">
+                            <div class="change-view-dus-exchange ml-2" >
+                                <span class="toggle-btn-icon-size material-icons">
                                 view_sidebar
                                 </span>
                                 </div>
                         </div>
                     </div>
-                    
+
                 </div>
-                
-                <div style="display: flex; margin-bottom: 1.5rem;">
-        
-        
-                    <div class="col-background round-corner" style="width: 70%; height: 3rem;">
-                      <form style="padding: 0px 27px;">
+
+                <div class="dropdown-box">
+
+
+                    <div class="col-background round-corner search-btn-size">
+                      <form class="search-inner">
                           <mat-form-field class="light-gray">
                             <span matPrefix>{{'SEARCH' | translate }} &nbsp;</span>
                             <mat-icon matPrefix class="search-icon">search</mat-icon>
                             <input type="text" matInput placeholder="">
-          
+
                           </mat-form-field>
                       </form>
                     </div>
-          
-                    <div class="" style="width: 30%; height: 3rem; margin-left: 1rem;">
-                      <div class="dropdown">
-                        <button class="btn btn-block chrome dropdown-toggle background-white br-100 dropdown-toggle
-                                       text-left" type="button" id="dropdownMenuButton"
-                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          
-                          <span class="fontClr3">
-                            Select
-                          </span>
-                        </button>
-                        <div class="dropdown-menu dropdown-shadow-effect" aria-labelledby="dropdownMenuButton">
-          
-                          <button class="dropdown-item" type="button" >xyz</button>
-                        </div>
+                    <div class="sortby-spacing">
+                      <pvp-dropdown></pvp-dropdown>
                       </div>
-                      </div>
-                      <div style="width: 70%;text-align: right;">
+                      <div class="playlist-icon-btn-box">
 
-                        <div style="display: inline-block;
-                        height: 2.5rem;
-                        width: 2.5rem;
-                        background-color: #fff;
-                        text-align: center;
-                        padding: 4px;
-                        border-radius: 5px; margin-left: 0.5rem;">
-                            <span style="font-size: 2rem" class="material-icons">
+                        <div class="change-view-dus-exchange">
+                          <span class="toggle-btn-icon-size material-icons">
                             playlist_play
                             </span>
                             </div>
                       </div>
                     </div>
-                
-                
+
+
                 <br>
                 <div class="grid-size">
-                    <mat-card class="grid-properties back-transparent">
-                        <mat-grid-list cols="8" rowHeight="50px" class="back-transparent">
-                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
+                    <mat-card class="grid-properties grid-title">
+                        <mat-grid-list cols="8" rowHeight="50px">
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
                                 <div class="flyout-leftalign">
                                     <mat-radio-group aria-label="Select an option">
                                         <mat-radio-button value="1"></mat-radio-button>
                                     </mat-radio-group>
                                     <span>International Reference number</span>
                                 </div>
-                                
+
                             </mat-grid-tile>
-                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
                                 <span>Application Number</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile  [colspan]="1" [rowspan]="1">
                                 <span>Application status</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
                                 <span>Submission date</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="back-transparent" [colspan]="2" [rowspan]="1">
+                            <mat-grid-tile [colspan]="2" [rowspan]="1">
                                 <span>Dus exam. status</span>
                             </mat-grid-tile>
-                            <mat-grid-tile class="back-transparent" [colspan]="1" [rowspan]="1">
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
                                 <span>Dus report status</span>
                             </mat-grid-tile>
                         </mat-grid-list>
                     </mat-card>
                     <mat-card class="grid-properties" *ngFor="let gridItem of gridData; let gridIndex = index">
                         <mat-grid-list cols="8" rowHeight="50px" matBadge="4" matBadgeSize="large">
-        
+
                             <mat-grid-tile class="col-background " [colspan]="1" [rowspan]="1">
                                 <div class="flyout-leftalign">
                                     <mat-radio-group aria-label="Select an option">
@@ -195,7 +174,7 @@
                                     </mat-radio-group>
                                     {{gridItem.refNo}}
                                 </div>
-                                
+
                             </mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><b>{{gridItem.id}}</b></mat-grid-tile>
                             <mat-grid-tile class="col-background" [colspan]="1" [rowspan]="1"><app-progress-bar></app-progress-bar></mat-grid-tile>
@@ -212,26 +191,26 @@
                                         keyboard_arrow_up
                                     </span>
                                 </div>
-                                
+
                             </mat-grid-tile>
                         </mat-grid-list>
                         <mat-expansion-panel [expanded]="gridItem.panelOpenState">
-                            
+
                             <mat-grid-list cols="3" rowHeight="50px" [gutterSize]="'25px'">
                                 <mat-grid-tile [colspan]="2" class="grid-des">
                                     <div class="des-header">Request for examination received.</div><br><br>
                                    <div>Application not received by: Myanmar, Malatsia</div>
-                                   
-                                    
+
+
                                 </mat-grid-tile>
                                 <mat-grid-tile [colspan]="1">
-                                    <button mat-button class="grid-desc-button-new">{{ 'SEND_NOTIFICATION' | translate }}</button>
+                                    <button mat-button class="notification-btn-dus-exchange">{{ 'SEND_NOTIFICATION' | translate }}</button>
                                 </mat-grid-tile>
                             </mat-grid-list>
                         </mat-expansion-panel>
-                    </mat-card> 
+                    </mat-card>
                 </div>
-                
+
             </div>
         </div>
     </mat-sidenav-content>
