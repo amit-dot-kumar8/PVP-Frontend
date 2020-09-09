@@ -1,3 +1,8 @@
+@import './color-palettes';
+
+
+
+
 html, body {
   height: 100%;
 }
@@ -5,7 +10,7 @@ html, body {
 body {
   margin: 0;
   font-family: BrownPro, "Helvetica Neue", sans-serif;
-  background-color: #f6f6f6;
+  background-color: $pvp-body-background-grey;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
 }
@@ -163,14 +168,14 @@ b, strong {
 }
 .view-button{
   background: lightgray;
-  color: black;
+  color: $pvp-black;
   border-radius: 50px !important;
   line-height: 2 !important;
   margin-right: 0.5rem !important;
 }
 .arrow-icon{
-  background: black;
-  color: white;
+  background: $pvp-black;
+  color: $pvp-white;
   border-radius: 100px;
   cursor: pointer;
 }
@@ -178,7 +183,7 @@ b, strong {
 
 
 .notification-badge{
-  background: #F96656;
+  background: $pvp-noification-brick-red;
   padding: 7px 10px;
   height: 2rem;
   line-height: 1;
@@ -225,7 +230,7 @@ b, strong {
   text-align: end;
 }
 .menu-close-icon-pvp {
-  background: #3652FF;
+  background: $pvp-admintool-blue;
   height: 30px;
   width: 30px;
   font-size: 1.8em;
@@ -234,7 +239,7 @@ b, strong {
 }
 
 .menu-close-icon-dus {
-  background: #01d7f0;
+  background: $pvp-dus-exchange-theme-green;
   height: 30px;
   width: 30px;
   font-size: 1.8em;
@@ -276,14 +281,14 @@ b, strong {
 }
 
 .grid-desc-button-flyout-pvp-admin {
-  color: #3652FF;
+  color: $pvp-admintool-blue;
   border: 2px solid !important;
   border-radius: 100px !important;
   line-height: 25px !important;
 }
 
 .grid-desc-button-flyout-dus-exchange {
-  color: #01d7f0;
+  color: $pvp-dus-exchange-theme-green;
   border: 2px solid !important;
   border-radius: 100px !important;
   line-height: 25px !important;
@@ -292,7 +297,7 @@ b, strong {
 
 
 .grid-desc-button-edit-pvp {
-  background-color: #3652FF;
+  background-color: $pvp-admintool-blue;
   color: white;
   border-radius: 50px !important;
   font-weight: 400;
@@ -300,7 +305,7 @@ b, strong {
 }
 
 .grid-desc-button-edit-dus {
-  background-color: #01d7f0;
+  background-color: $pvp-dus-exchange-theme-green;
   color: white;
   border-radius: 50px !important;
   font-weight: 400;
@@ -312,7 +317,7 @@ b, strong {
 }
 
 .col-background-gray{
-  background:  #F6F6F6;
+  background:  $pvp-body-background-grey;
 }
 
 .applicant-head {
@@ -364,7 +369,7 @@ b, strong {
 
 
 .sticky-card {
-  background: #eee;
+  background: $pvp-sticky-card-background-grey;
 }
 
 .sticky-card>div>.mat-grid-tile>.mat-figure {
@@ -373,10 +378,10 @@ b, strong {
 }
 
 .sticky-card-style {
-  background: #eeeeee;
+  background: $pvp-sticky-card-background-grey;
 }
 .sticky-card-style-active {
-  background: #ffffff;
+  background: $pvp-white;
 }
 
 .sticky-card-style-nodata {
@@ -395,16 +400,18 @@ b, strong {
 .progress-bar {
   width: 7px;
   height: 7px;
-  transform: scaleY(-1); display: inline-block;margin-right: 0.5rem;
+  transform: scaleY(-1);
+  display: inline-block;
+  margin-right: 0.5rem;
   border-radius: 100%;
 }
 
 .progress-bar-green {
-  background: #8ed464;
+  background: $progress-bar-green;
 }
 
 .progress-bar-grey {
-  background: #d8d8d8;
+  background: $progress-bar-grey;
 }
 
 
@@ -416,7 +423,7 @@ b, strong {
 
 .grid-col-border{
     border-radius: 10px;
-    background: white;
+    background: $pvp-white;
 }
 
 .card-font {

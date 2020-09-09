@@ -1,3 +1,5 @@
+@import './color-palettes';
+
 @mixin header-nav-size {
   color: #fff;
   padding: 1rem 6rem;
@@ -28,22 +30,22 @@
 
 .app-mon-header-nav {
   @include header-nav-size;
-  background-color: #00C5AE;
+  background-color: $pvp-applicant-monitoring-theme-green;
 }
 
 .pvp-admin-header-nav {
   @include header-nav-size;
-  background-color: #3652FF;
+  background-color: $pvp-admintool-blue;
 }
 
 .dus-exchange-header-nav {
   @include header-nav-size;
-  background-color: #01d7f0;
+  background-color: $pvp-dus-exchange-theme-green;
 }
 
 .pvp-platform-header-nav {
   @include header-nav-size;
-  background-color: #6a37ff;
+  background-color: $pvp-platform-theme-purple;
 }
 
 .header-app-icon {
@@ -69,22 +71,22 @@ flex-wrap: wrap;
 
 .header-office-procedure-pvp {
  @include header-office-procedure-box;
- background: #a9baff;
+ background: $pvp-admintool-dark-blue;
 }
 
 .header-office-procedure-pvp-platform {
   @include header-office-procedure-box;
-  background: #b0a9ff;
+  background: $pvp-platform-pink;
  }
 
 .header-office-procedure-app-mon {
   @include header-office-procedure-box;
-  background: #008272;
+  background: $pvp-applicant-monitoring-dark-green;
  }
 
  .header-office-procedure-dus-exchange {
   @include header-office-procedure-box;
-  background: #00acc8;
+  background: $pvp-dus-exchange-dark-green;
  }
 
 .header-user-box {
@@ -115,17 +117,17 @@ flex-wrap: wrap;
 }
 
 .header-img-pvp-admin {
- @include header-img-style(#3652FF, url("./../assets/image/pvp-admin-tool.png"));
+ @include header-img-style($pvp-admintool-blue, url("./../assets/image/pvp-admin-tool.png"));
 }
 
 .header-img-pvp-platform {
-  @include header-img-style(#6a37ff, url("./../assets/image/Data-monitor-2.png"));
+  @include header-img-style($pvp-platform-theme-purple, url("./../assets/image/Data-monitor-2.png"));
  }
 
  .header-img-dus-exchange {
-  @include header-img-style(#00D8ED, url("./../assets/image/dus-background.png"));
+  @include header-img-style($pvp-dus-exchange-theme-green, url("./../assets/image/dus-background.png"));
  }
 
  .header-img-applicant-monitoring {
-  @include header-img-style(#00c5ac, url("./../assets/image/Group-4.png"));
+  @include header-img-style($pvp-applicant-monitoring-theme-green, url("./../assets/image/Group-4.png"));
  }

@@ -1,3 +1,5 @@
+@import './color-palettes';
+
 .mat-form-field-appearance-legacy .mat-form-field-underline {
   background-color: transparent !important;
 }
@@ -32,13 +34,13 @@
 }
 
 .mat-badge-content {
-  color: #fff;
-  background: #345FF5;
+  color: $pvp-white;
+  background: $pvp-noification-blue;
   font-weight: 400 !important;
 }
 
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-  border-color: #000000 !important;
+  border-color: $pvp-black !important;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {

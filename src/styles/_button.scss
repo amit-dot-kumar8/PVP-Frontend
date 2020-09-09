@@ -1,3 +1,6 @@
+@import './color-palettes';
+
+
 @mixin square-btn {
   display: inline-block;
   height: 2.5rem;
@@ -53,7 +56,7 @@ button:focus {
   @include square-btn;
 
   &:hover, &:focus, &:active {
-    border: 2px solid #6a37ff;
+    border: 2px solid $pvp-platform-theme-purple;
 }
 }
 
@@ -61,7 +64,7 @@ button:focus {
   @include square-btn;
 
   &:hover, &:focus, &:active {
-    border: 2px solid #01d7f0;
+    border: 2px solid $pvp-dus-exchange-theme-green;
   }
 }
 
@@ -69,7 +72,7 @@ button:focus {
   @include square-btn;
 
   &:hover, &:focus, &:active {
-    border: 2px solid #00C5AE;
+    border: 2px solid $pvp-applicant-monitoring-theme-green;
   }
 }
 
@@ -81,31 +84,31 @@ button:focus {
 }
 
 .background-white {
-  background: #ffffff;
+  background: $pvp-white;
   border-radius: 100px;
   padding: 10px;
 }
 
 .notification-btn-pvp-platform {
   @include round-corner-btn;
-  background-color: #6a37ff;
+  background-color: $pvp-platform-theme-purple;
 }
 
 .notification-btn-pvp-admin {
   @include round-corner-btn;
-  background-color: #3652FF;
+  background-color: $pvp-admintool-blue;
 }
 
 .notification-btn-dus-exchange {
   @include round-corner-btn;
-  background-color: #01d7f0;
+  background-color: $pvp-dus-exchange-theme-green;
 }
 
 .notification-btn-app-monitoring {
-  color: #00C5AE;
+  color: $pvp-applicant-monitoring-theme-green;
   border-radius: 50px !important;
   font-weight: 400;
   line-height: 28px !important;
-  border: 2px solid #00C5AE !important;
+  border: 2px solid $pvp-applicant-monitoring-theme-green !important;
 }
 
